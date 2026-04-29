@@ -1,4 +1,5 @@
 const repoUrl = "https://github.com/Pancratzia/Prompt-to-Project";
+const dayOneFolderUrl = "https://github.com/Pancratzia/Prompt-to-Project/tree/main/day-01-landing-page";
 
 const translations = {
   en: {
@@ -49,6 +50,7 @@ const translations = {
     ruleFour: "Refine the prompt after seeing the result.",
     footerBuilt: "Built by Pancratzia.",
     footerText: "Day 01 of Prompt-to-Project.",
+    footerFolder: "Day 01 folder",
     footerProfile: "Creator profile",
     footerRepo: "Main repository",
     backToTop: "Back to top",
@@ -58,7 +60,7 @@ const translations = {
         title: "Landing Page",
         description: "Main hub for the challenge: prompts, code, lessons, and shipped practice.",
         status: "Live",
-        url: repoUrl
+        url: dayOneFolderUrl
       },
       {
         day: "Day 02",
@@ -122,6 +124,7 @@ const translations = {
     ruleFour: "Refinar el prompt después de ver el resultado.",
     footerBuilt: "Creado por Pancratzia.",
     footerText: "Día 01 de Prompt-to-Project.",
+    footerFolder: "Carpeta Día 01",
     footerProfile: "Perfil del creador",
     footerRepo: "Repositorio principal",
     backToTop: "Volver arriba",
@@ -131,7 +134,7 @@ const translations = {
         title: "Landing Page",
         description: "Hub del reto: prompts, código, lecciones y práctica publicada.",
         status: "Activo",
-        url: repoUrl
+        url: dayOneFolderUrl
       },
       {
         day: "Día 02",
@@ -195,6 +198,7 @@ const translations = {
     ruleFour: "Rifinire il prompt dopo il risultato.",
     footerBuilt: "Creato da Pancratzia.",
     footerText: "Giorno 01 di Prompt-to-Project.",
+    footerFolder: "Cartella Giorno 01",
     footerProfile: "Profilo creator",
     footerRepo: "Repository principale",
     backToTop: "Torna su",
@@ -204,7 +208,7 @@ const translations = {
         title: "Landing Page",
         description: "Hub della sfida: prompt, codice, lezioni e pratica pubblicata.",
         status: "Online",
-        url: repoUrl
+        url: dayOneFolderUrl
       },
       {
         day: "Giorno 02",
@@ -268,6 +272,7 @@ const translations = {
     ruleFour: "Affiner le prompt après le résultat.",
     footerBuilt: "Créé par Pancratzia.",
     footerText: "Jour 01 de Prompt-to-Project.",
+    footerFolder: "Dossier Jour 01",
     footerProfile: "Profil du créateur",
     footerRepo: "Dépôt principal",
     backToTop: "Retour en haut",
@@ -277,7 +282,7 @@ const translations = {
         title: "Landing Page",
         description: "Hub du défi: prompts, code, leçons et pratique livrée.",
         status: "En ligne",
-        url: repoUrl
+        url: dayOneFolderUrl
       },
       {
         day: "Jour 02",
@@ -341,6 +346,7 @@ const translations = {
     ruleFour: "Refinar o prompt depois do resultado.",
     footerBuilt: "Criado por Pancratzia.",
     footerText: "Dia 01 de Prompt-to-Project.",
+    footerFolder: "Pasta Dia 01",
     footerProfile: "Perfil da criadora",
     footerRepo: "Repositório principal",
     backToTop: "Voltar ao topo",
@@ -350,7 +356,7 @@ const translations = {
         title: "Landing Page",
         description: "Hub do desafio: prompts, código, lições e prática publicada.",
         status: "No ar",
-        url: repoUrl
+        url: dayOneFolderUrl
       },
       {
         day: "Dia 02",

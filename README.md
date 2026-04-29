@@ -1,116 +1,103 @@
-# 🚀 Prompt-to-Project
+# Prompt-to-Project
 
 Building one project per day using AI.
 
 This repo documents not only the projects, but also the prompts, iterations, and lessons behind AI-assisted development.
 
----
-
-## 📅 Structure
+## Structure
 
 Each project lives in its own folder:
 
-```
+```text
 /day-01-landing-page
 /day-02-...
 /day-03-...
 ```
 
-Inside each folder:
+Inside each day folder:
 
-```
+```text
 index.html
 style.css
 script.js
-prompts.md
+projects.md
 README.md
 ```
 
----
+## What this is really about
 
-## 🧠 What this is really about
-
-This is not just a collection of projects.
-
-This is a **prompt engineering lab**.
+This is a prompt engineering lab.
 
 Each day focuses on:
 
-* Writing better prompts
-* Iterating with AI
-* Understanding what works (and what doesn’t)
-* Shipping fast
+- Writing better prompts
+- Iterating with AI
+- Understanding what works and what does not
+- Shipping fast
 
----
+## Tech Stack
 
-## 🛠️ Tech Stack
+- HTML
+- CSS
+- JavaScript
+- AI-assisted development tools
 
-* HTML
-* CSS
-* JavaScript
-* AI tools (ChatGPT, Claude, etc.)
+## Projects
 
----
+### Day 01 — Landing Page
 
-## 📦 Projects
+Main hub for the Prompt-to-Project challenge.
 
-### 🟢 Day 01 — Project Landing Page
+- Project folder: [/day-01-landing-page/](./day-01-landing-page/)
+- Entry point: [/day-01-landing-page/index.html](./day-01-landing-page/index.html)
 
-A landing page for this repository.
+## Deployment
 
-**Goal:**
-Create a clean, modern website that:
+The repository is structured for Netlify deployment from the full repo.
 
-* Explains the project
-* Lists daily builds
-* Shows progress over time
+The root route redirects to:
 
-**Focus:**
+```text
+/day-01-landing-page/index.html
+```
 
-* UI/UX clarity
-* Clean layout
-* AI-assisted design decisions
+Future days can be added as sibling routes:
 
----
+```text
+/day-02-...
+/day-03-...
+```
 
-## 🎯 Rules
+## Rules
 
-* Ship one project per day
-* No overthinking — done > perfect
-* Document prompts used
-* Improve iteratively
+- Ship one project per day
+- Done is better than perfect
+- Document prompts used
+- Improve iteratively
 
----
-
-## 🔥 Why this exists
+## Why this exists
 
 Most people use AI randomly.
 
-This repo is about using AI **intentionally**.
+This repo is about using AI intentionally.
 
----
+## Next
 
-## 📌 Next
+- Add Day 02
+- Improve the landing page archive
+- Experiment with better prompting techniques
 
-* Add Day 02
-* Improve the landing page
-* Experiment with better prompting techniques
-
----
-
-## 🧪 Prompt Philosophy
+## Prompt Philosophy
 
 Good output comes from good prompts.
 
 Every project includes:
 
-* Initial prompt
-* Iterations
-* Final result
-* Lessons learned
+- Initial prompt
+- Iterations
+- Final result
+- Lessons learned
 
----
-
-## 👀 Follow the journey
+## Follow the journey
 
 New project every day.
