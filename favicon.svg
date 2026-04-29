@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt-to-Project favicon</title>
+  <desc id="desc">A compact P2P monogram for the Prompt-to-Project creative coding lab.</desc>
+  <rect width="64" height="64" rx="14" fill="#151514"/>
+  <path d="M14 17h15c7 0 12 4.2 12 10.8S36 38.5 29 38.5h-7V48h-8V17Zm8 7v7.6h6.3c2.8 0 4.5-1.5 4.5-3.8S31.1 24 28.3 24H22Z" fill="#f7f2e8"/>
+  <path d="M41 19h8v29h-8V19Z" fill="#cf6549"/>
+  <path d="M47 17l7 7-7 7-4.7-4.6 2.4-2.4-2.4-2.4L47 17Z" fill="#b7c95c"/>
+  <path d="M14 53h36" stroke="#1d5e78" stroke-width="4" stroke-linecap="round"/>
+</svg>
