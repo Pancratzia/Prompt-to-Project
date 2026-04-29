@@ -50,6 +50,7 @@ Main hub for the Prompt-to-Project challenge.
 
 - Project folder: [/day-01-landing-page/](./day-01-landing-page/)
 - Entry point: [/day-01-landing-page/index.html](./day-01-landing-page/index.html)
+- Approximate time spent: about 1 hour of active work.
 
 ## Deployment
 
