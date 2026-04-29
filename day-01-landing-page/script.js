@@ -384,7 +384,7 @@ function renderProjects(language) {
   projectGrid.innerHTML = labels.projects
     .map((project) => {
       const link = project.url
-        ? `<a class="project-link" href="${project.url}">${labels.projectOpen}</a>`
+        ? `<a class="project-link" href="${project.url}" target="_blank" rel="noopener noreferrer">${labels.projectOpen}</a>`
         : `<span class="project-link muted-link">${project.status}</span>`;
 
       return `
