@@ -85,7 +85,13 @@ To publish free installers:
    https://github.com/Pancratzia/Prompt-to-Project/releases/download/taskflow-local-v0.1.0/TaskFlow%20Local_0.1.0_x64_en-US.msi
    ```
 
-The TaskFlow landing already includes placeholder buttons for GitHub Releases, EXE, and MSI. They will work once the matching release tag and asset filenames exist.
+The TaskFlow landing points to the published release:
+
+```text
+https://github.com/Pancratzia/Prompt-to-Project/releases/tag/taskflow-local-v0.1.0
+```
+
+It also includes direct EXE and MSI buttons for the matching release assets.
 
 ## What This Is Really About
 

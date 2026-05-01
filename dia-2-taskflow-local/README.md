@@ -335,6 +335,12 @@ app/src-tauri/target/release/bundle/msi/TaskFlow Local_0.1.0_x64_en-US.msi
 app/src-tauri/target/release/bundle/nsis/TaskFlow Local_0.1.0_x64-setup.exe
 ```
 
+Release publicado:
+
+```text
+https://github.com/Pancratzia/Prompt-to-Project/releases/tag/taskflow-local-v0.1.0
+```
+
 La landing ya incluye botones para GitHub Releases, Windows EXE y Windows MSI. Si el tag y los nombres de archivo coinciden con `taskflow-local-v0.1.0`, los enlaces directos deben quedar asi:
 
 ```text
