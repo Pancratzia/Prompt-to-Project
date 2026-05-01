@@ -91,7 +91,7 @@ The TaskFlow landing points to the published release:
 https://github.com/Pancratzia/Prompt-to-Project/releases/tag/taskflow-local-v0.1.0
 ```
 
-It also includes direct EXE and MSI buttons for the matching release assets.
+The landing links to the release page, where the EXE and MSI installers are available as release assets.
 
 ## What This Is Really About
 

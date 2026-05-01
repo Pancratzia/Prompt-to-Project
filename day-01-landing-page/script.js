@@ -66,7 +66,9 @@ const translations = {
         title: "Landing Page",
         description: "Main hub for the challenge: prompts, code, lessons, and shipped practice.",
         status: "Live",
-        url: dayOneFolderUrl
+        url: dayOneFolderUrl,
+        screenshot: "assets/day-01-landing-screenshot.png",
+        screenshotAlt: "Prompt-to-Project landing page screenshot"
       },
       {
         day: "Day 02",
@@ -147,7 +149,9 @@ const translations = {
         title: "Landing Page",
         description: "Hub del reto: prompts, código, lecciones y práctica publicada.",
         status: "Activo",
-        url: dayOneFolderUrl
+        url: dayOneFolderUrl,
+        screenshot: "assets/day-01-landing-screenshot.png",
+        screenshotAlt: "Captura de la landing Prompt-to-Project"
       },
       {
         day: "Dia 02",
@@ -228,7 +232,9 @@ const translations = {
         title: "Landing Page",
         description: "Hub della sfida: prompt, codice, lezioni e pratica pubblicata.",
         status: "Online",
-        url: dayOneFolderUrl
+        url: dayOneFolderUrl,
+        screenshot: "assets/day-01-landing-screenshot.png",
+        screenshotAlt: "Screenshot della landing Prompt-to-Project"
       },
       {
         day: "Giorno 02",
@@ -309,7 +315,9 @@ const translations = {
         title: "Landing Page",
         description: "Hub du défi: prompts, code, leçons et pratique livrée.",
         status: "En ligne",
-        url: dayOneFolderUrl
+        url: dayOneFolderUrl,
+        screenshot: "assets/day-01-landing-screenshot.png",
+        screenshotAlt: "Capture de la landing Prompt-to-Project"
       },
       {
         day: "Jour 02",
@@ -390,7 +398,9 @@ const translations = {
         title: "Landing Page",
         description: "Hub do desafio: prompts, código, lições e prática publicada.",
         status: "No ar",
-        url: dayOneFolderUrl
+        url: dayOneFolderUrl,
+        screenshot: "assets/day-01-landing-screenshot.png",
+        screenshotAlt: "Captura da landing Prompt-to-Project"
       },
       {
         day: "Dia 02",
@@ -423,7 +433,7 @@ function renderProjects(language) {
         ? `<a class="project-link" href="${project.url}">${labels.projectOpen}</a>`
         : `<span class="project-link muted-link">${project.status}</span>`;
       const screenshot = project.screenshot
-        ? `<img class="project-screenshot" src="${project.screenshot}" alt="${labels.projectScreenshotAlt || project.title}" loading="lazy" />`
+        ? `<img class="project-screenshot" src="${project.screenshot}" alt="${project.screenshotAlt || labels.projectScreenshotAlt || project.title}" loading="lazy" />`
         : "";
 
       return `

@@ -341,7 +341,7 @@ Release publicado:
 https://github.com/Pancratzia/Prompt-to-Project/releases/tag/taskflow-local-v0.1.0
 ```
 
-La landing ya incluye botones para GitHub Releases, Windows EXE y Windows MSI. Si el tag y los nombres de archivo coinciden con `taskflow-local-v0.1.0`, los enlaces directos deben quedar asi:
+La landing incluye un boton a GitHub Releases. Los instaladores Windows EXE y Windows MSI se descargan desde los assets del release. Si el tag y los nombres de archivo coinciden con `taskflow-local-v0.1.0`, los enlaces directos de referencia quedan asi:
 
 ```text
 https://github.com/Pancratzia/Prompt-to-Project/releases/download/taskflow-local-v0.1.0/TaskFlow%20Local_0.1.0_x64-setup.exe
