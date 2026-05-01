@@ -11,6 +11,7 @@ Each project lives in its own folder:
 ```text
 day-01-landing-page/
 dia-2-taskflow-local/
+dia-3-debugger-mental/
 ```
 
 ## Projects
@@ -32,9 +33,17 @@ TaskFlow Local is a desktop work log, not a ClickUp/Asana-style task manager. It
 - Desktop app: [dia-2-taskflow-local/app/](./dia-2-taskflow-local/app/)
 - Clean routes for deploys: `/taskflow`, `/taskflow-local`, `/day-2`
 
+### Day 03 - Debugger Mental
+
+Debugger Mental is a bilingual browser puzzle about stabilizing abstract mental systems through connected nodes, limited actions, random events, and local saved games.
+
+- Folder: [dia-3-debugger-mental/](./dia-3-debugger-mental/)
+- Entry point: [dia-3-debugger-mental/index.html](./dia-3-debugger-mental/index.html)
+- Clean routes for deploys: `/debugger-mental`, `/debugger`, `/day-3`
+
 ## Deployment
 
-The repository is ready for a static deploy from the repo root. The `_redirects` file sends the root route to Day 01 and exposes clean routes for TaskFlow.
+The repository is ready for a static deploy from the repo root. The `_redirects` file sends the root route to Day 01 and exposes clean routes for each shipped project.
 
 ```text
 /              -> /day-01-landing-page/index.html
@@ -42,6 +51,9 @@ The repository is ready for a static deploy from the repo root. The `_redirects`
 /taskflow      -> /dia-2-taskflow-local/landing/index.html
 /taskflow-local -> /dia-2-taskflow-local/landing/index.html
 /day-2         -> /dia-2-taskflow-local/landing/index.html
+/debugger-mental -> /dia-3-debugger-mental/index.html
+/debugger      -> /dia-3-debugger-mental/index.html
+/day-3         -> /dia-3-debugger-mental/index.html
 ```
 
 ## TaskFlow Local Releases

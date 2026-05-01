@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Debugger Mental es un juego de navegador sobre sistemas mentales abstractos, nodos conectados y puzzles de estabilidad."
+    />
+    <meta name="author" content="Pancratzia" />
+    <meta name="theme-color" content="#111414" />
+    <title>Debugger Mental</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#app" data-i18n="skip">Saltar al contenido</a>
+
+    <div id="app">
+      <section id="landing" class="screen landing-screen active">
+        <header class="site-header">
+          <nav class="nav" aria-label="Navegacion principal">
+            <a class="brand" href="#landing" data-route="landing">
+              <span class="brand-mark">DM</span>
+              <span>Debugger Mental</span>
+            </a>
+            <div class="nav-actions">
+              <a href="#features" data-i18n="navFeatures">Caracteristicas</a>
+              <a href="#how" data-i18n="navHow">Como funciona</a>
+              <select id="landing-language" aria-label="Idioma">
+                <option value="es">Espanol</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+          </nav>
+        </header>
+
+        <main>
+          <section class="hero section">
+            <div class="hero-grid">
+              <div class="hero-copy" data-animate>
+                <p class="eyebrow" data-i18n="heroEyebrow">Puzzle de sistemas / navegador</p>
+                <h1>Debugger Mental</h1>
+                <p class="hero-text" data-i18n="heroSubtitle">
+                  Repara sistemas mentales, conecta ideas y estabiliza el caos.
+                </p>
+                <div class="hero-actions">
+                  <button class="button button-primary" type="button" data-action="open-language" data-i18n="playNow">Jugar ahora</button>
+                  <a class="button button-secondary" href="#how" data-i18n="howItWorks">Como funciona</a>
+                </div>
+              </div>
+
+              <aside class="mock-board" aria-label="Mockup del tablero" data-animate>
+                <div class="mock-topline">
+                  <span>SIM-04</span>
+                  <span data-i18n="stability">Estabilidad</span>
+                </div>
+                <svg viewBox="0 0 540 360" role="img" aria-label="Nodos conectados">
+                  <defs>
+                    <linearGradient id="wireGood" x1="0" x2="1">
+                      <stop offset="0" stop-color="#41d6a4" />
+                      <stop offset="1" stop-color="#7adfff" />
+                    </linearGradient>
+                    <linearGradient id="wireBad" x1="0" x2="1">
+                      <stop offset="0" stop-color="#ff6a5f" />
+                      <stop offset="1" stop-color="#ffb86b" />
+                    </linearGradient>
+                  </defs>
+                  <path class="wire good" d="M135 102 C220 74 270 96 350 82" />
+                  <path class="wire bad" d="M152 238 C245 210 278 252 390 218" />
+                  <path class="wire good" d="M122 110 C102 178 120 198 156 240" />
+                  <path class="wire bad" d="M350 96 C432 130 430 174 398 214" />
+                  <g class="mock-node stable" transform="translate(58 64)">
+                    <rect width="140" height="74" rx="8" />
+                    <text x="16" y="30">Energia</text>
+                    <text x="16" y="55">68%</text>
+                  </g>
+                  <g class="mock-node danger" transform="translate(308 42)">
+                    <rect width="146" height="78" rx="8" />
+                    <text x="16" y="31">Estres</text>
+                    <text x="16" y="58">72%</text>
+                  </g>
+                  <g class="mock-node focus" transform="translate(92 210)">
+                    <rect width="150" height="78" rx="8" />
+                    <text x="16" y="31">Enfoque</text>
+                    <text x="16" y="58">54%</text>
+                  </g>
+                  <g class="mock-node critical" transform="translate(348 186)">
+                    <rect width="150" height="82" rx="8" />
+                    <text x="16" y="32">Ruido mental</text>
+                    <text x="16" y="61">81%</text>
+                  </g>
+                </svg>
+              </aside>
+            </div>
+          </section>
+
+          <section id="features" class="section features-section">
+            <div class="section-heading" data-animate>
+              <p class="eyebrow" data-i18n="featuresEyebrow">Sistema jugable</p>
+              <h2 data-i18n="featuresTitle">Un puzzle distinto cada partida.</h2>
+            </div>
+            <div class="feature-grid">
+              <article data-animate><span>01</span><h3 data-i18n="featureRandom">Sistemas generados aleatoriamente</h3></article>
+              <article data-animate><span>02</span><h3 data-i18n="featureDiagrams">Diagramas interactivos</h3></article>
+              <article data-animate><span>03</span><h3 data-i18n="featureStrategy">Decisiones estrategicas</h3></article>
+              <article data-animate><span>04</span><h3 data-i18n="featureSaves">Partidas guardadas en navegador</h3></article>
+              <article data-animate><span>05</span><h3 data-i18n="featureLang">Espanol e ingles</h3></article>
+            </div>
+          </section>
+
+          <section id="how" class="section how-section">
+            <div data-animate>
+              <p class="eyebrow" data-i18n="howEyebrow">Como funciona</p>
+              <h2 data-i18n="howTitle">Observa, interviene, simula, sobrevive.</h2>
+            </div>
+            <p data-animate data-i18n="howText">
+              Cada nodo representa una variable. Las conexiones transmiten efectos. Tus recursos son limitados: ajusta nodos, corta distracciones, reestructura conexiones y busca tres turnos estables antes de que el sistema colapse.
+            </p>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <p data-i18n="disclaimer">Debugger Mental es un juego de estrategia y simulacion. No ofrece consejo medico ni psicologico.</p>
+          <a href="#landing" data-i18n="backToTop">Volver arriba</a>
+        </footer>
+      </section>
+
+      <section id="language-screen" class="screen gate-screen">
+        <div class="gate-card">
+          <p class="eyebrow">Debugger Mental</p>
+          <h2 data-i18n="chooseLanguage">Elige idioma</h2>
+          <div class="choice-row">
+            <button type="button" class="button button-primary" data-set-lang="es">Espanol</button>
+            <button type="button" class="button button-secondary" data-set-lang="en">English</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="screen menu-screen">
+        <div class="menu-shell">
+          <header class="menu-header">
+            <div>
+              <p class="eyebrow" data-i18n="mainMenu">Menu principal</p>
+              <h2>Debugger Mental</h2>
+            </div>
+            <select id="menu-language" aria-label="Idioma">
+              <option value="es">Espanol</option>
+              <option value="en">English</option>
+            </select>
+          </header>
+          <div class="menu-grid">
+            <button type="button" class="menu-card" data-action="new-game">
+              <span>01</span>
+              <strong data-i18n="newGame">Nueva partida</strong>
+              <small data-i18n="newGameText">Genera un nuevo sistema mental.</small>
+            </button>
+            <button type="button" class="menu-card" data-action="continue-game">
+              <span>02</span>
+              <strong data-i18n="continueGame">Continuar partida</strong>
+              <small id="save-status" data-i18n="noSave">No hay partida guardada.</small>
+            </button>
+            <button type="button" class="menu-card" data-action="tutorial">
+              <span>03</span>
+              <strong data-i18n="tutorial">Tutorial interactivo</strong>
+              <small data-i18n="tutorialText">Aprende nodos, conexiones y turnos.</small>
+            </button>
+            <button type="button" class="menu-card danger-card" data-action="delete-save">
+              <span>04</span>
+              <strong data-i18n="deleteSave">Borrar guardado</strong>
+              <small data-i18n="deleteSaveText">Reinicia el almacenamiento local.</small>
+            </button>
+          </div>
+          <button type="button" class="text-button" data-route="landing" data-i18n="backLanding">Volver a landing</button>
+        </div>
+      </section>
+
+      <section id="setup" class="screen setup-screen">
+        <div class="setup-card">
+          <p class="eyebrow" data-i18n="newGame">Nueva partida</p>
+          <h2 data-i18n="selectDifficulty">Selecciona dificultad</h2>
+          <div class="difficulty-grid" id="difficulty-grid"></div>
+          <div class="setup-actions">
+            <button type="button" class="button button-secondary" data-route="menu" data-i18n="cancel">Cancelar</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="tutorial-screen" class="screen tutorial-screen">
+        <div class="tutorial-card">
+          <p class="eyebrow" data-i18n="tutorial">Tutorial interactivo</p>
+          <h2 id="tutorial-title"></h2>
+          <p id="tutorial-body"></p>
+          <div class="tutorial-demo" id="tutorial-demo"></div>
+          <div class="tutorial-actions">
+            <button type="button" class="button button-secondary" data-action="tutorial-prev" data-i18n="previous">Anterior</button>
+            <button type="button" class="button button-primary" data-action="tutorial-next" data-i18n="next">Siguiente</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="game" class="screen game-screen">
+        <header class="game-topbar">
+          <div>
+            <strong>Debugger Mental</strong>
+            <span id="phase-label"></span>
+          </div>
+          <div class="resource-strip" id="resource-strip"></div>
+          <div class="top-actions">
+            <select id="game-language" aria-label="Idioma">
+              <option value="es">ES</option>
+              <option value="en">EN</option>
+            </select>
+            <button type="button" class="icon-button" data-action="toggle-help" data-i18n="help">Ayuda</button>
+            <button type="button" class="icon-button" data-action="save-game" title="Save">Save</button>
+            <button type="button" class="icon-button" data-route="menu" title="Menu">Menu</button>
+          </div>
+        </header>
+
+        <section id="quick-help" class="quick-help" aria-live="polite"></section>
+
+        <main class="game-layout">
+          <section class="board-wrap" aria-label="Tablero">
+            <svg id="connection-layer" class="connection-layer"></svg>
+            <div id="node-layer" class="node-layer"></div>
+          </section>
+
+          <aside class="inspector">
+            <div class="panel-block">
+              <p class="panel-label" data-i18n="selectedNode">Nodo seleccionado</p>
+              <div id="node-details"></div>
+            </div>
+            <div class="panel-block">
+              <p class="panel-label" data-i18n="cards">Tarjetas</p>
+              <div id="node-list" class="node-list"></div>
+            </div>
+            <div class="panel-block">
+              <p class="panel-label" data-i18n="objectives">Objetivos</p>
+              <div id="objective-list"></div>
+            </div>
+            <div class="panel-block">
+              <p class="panel-label" data-i18n="connections">Conexiones</p>
+              <div id="connection-list"></div>
+            </div>
+          </aside>
+        </main>
+
+        <footer class="game-footer">
+          <div class="action-panel">
+            <div class="action-heading">
+              <span data-i18n="actions">Acciones</span>
+              <small id="actions-left"></small>
+            </div>
+            <div id="action-buttons" class="action-buttons"></div>
+          </div>
+          <div class="console-panel">
+            <div class="action-heading">
+              <span data-i18n="systemLog">Log del sistema</span>
+              <button type="button" class="text-button compact" data-action="next-turn" data-i18n="nextTurn">Pasar turno</button>
+            </div>
+            <ol id="system-log" class="system-log"></ol>
+          </div>
+        </footer>
+      </section>
+
+      <section id="result" class="screen result-screen">
+        <div class="result-card">
+          <p class="eyebrow" id="result-kicker"></p>
+          <h2 id="result-title"></h2>
+          <p id="result-body"></p>
+          <div id="unlock-list" class="unlock-list"></div>
+          <div class="choice-row">
+            <button type="button" class="button button-primary" data-action="new-game" data-i18n="playAgain">Jugar otra vez</button>
+            <button type="button" class="button button-secondary" data-route="menu" data-i18n="mainMenu">Menu principal</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

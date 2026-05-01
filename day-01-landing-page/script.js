@@ -1,6 +1,7 @@
 const repoUrl = "https://github.com/Pancratzia/Prompt-to-Project";
 const dayOneFolderUrl = "./index.html";
 const taskFlowLandingUrl = "../dia-2-taskflow-local/landing/index.html";
+const debuggerMentalUrl = "../dia-3-debugger-mental/index.html";
 
 const translations = {
   en: {
@@ -14,19 +15,19 @@ const translations = {
     navPhilosophy: "Method",
     navRepo: "Repo",
     languageLabel: "Language",
-    heroEyebrow: "Day 02 / Current shipped build",
+    heroEyebrow: "Day 03 / Current shipped build",
     heroTitleLineOne: "Prompts in.",
     heroTitleLineTwo: "Projects out.",
     heroText:
       "One AI-assisted project per day. The feature is not always AI; the practice is prompting, iterating, and shipping with receipts.",
-    heroPrimary: "Explore Day 02",
+    heroPrimary: "Play Day 03",
     heroRepo: "View GitHub repo",
     panelLabel: "Current build",
     signalPrompt: "Prompt trail",
-    signalPromptValue: "TaskFlow Local",
+    signalPromptValue: "Debugger Mental",
     signalBuild: "Build mode",
     signalShip: "Ship state",
-    signalToday: "Day 02 live",
+    signalToday: "Day 03 live",
     aboutEyebrow: "Why it exists",
     aboutTitle: "A daily archive of shipped practice.",
     aboutText:
@@ -35,11 +36,11 @@ const translations = {
     projectsTitle: "Daily projects",
     projectsRepo: "Open repository",
     projectOpen: "Open project",
-    projectScreenshotAlt: "TaskFlow Local application screenshot",
-    previewEyebrow: "Day 02 preview",
-    previewTitle: "TaskFlow Local is now in the archive.",
-    previewLink: "Open TaskFlow landing",
-    previewCaption: "A local desktop work log for clients, projects, entries, reports, and an assistant that works with text or voice fallback.",
+    projectScreenshotAlt: "Project screenshot",
+    previewEyebrow: "Day 03 preview",
+    previewTitle: "Debugger Mental is now in the archive.",
+    previewLink: "Open Debugger Mental",
+    previewCaption: "A bilingual browser puzzle about stabilizing abstract mental systems with cards, links, resources, random events, and local saves.",
     philosophyEyebrow: "Prompting philosophy",
     philosophyTitle: "Prompting is the craft. Shipping is the proof.",
     principleOneTitle: "Set the frame",
@@ -80,9 +81,12 @@ const translations = {
       },
       {
         day: "Day 03",
-        title: "Next build",
-        description: "Another compact experiment, documented from prompt to project.",
-        status: "Planned"
+        title: "Debugger Mental",
+        description: "A bilingual browser puzzle for stabilizing abstract mental systems through cards, connections, actions, events, and saved runs.",
+        status: "Live",
+        url: debuggerMentalUrl,
+        screenshot: "assets/debugger-mental-screenshot.png",
+        screenshotAlt: "Debugger Mental browser game screenshot"
       }
     ]
   },
@@ -97,19 +101,19 @@ const translations = {
     navPhilosophy: "Método",
     navRepo: "Repo",
     languageLabel: "Idioma",
-    heroEyebrow: "Día 02 / Build publicado actual",
+    heroEyebrow: "Dia 03 / Build publicado actual",
     heroTitleLineOne: "Prompts entran.",
     heroTitleLineTwo: "Proyectos salen.",
     heroText:
       "Un proyecto asistido por IA cada día. La función no siempre es IA; la práctica es promptar, iterar y publicar con evidencia.",
-    heroPrimary: "Explorar Día 02",
+    heroPrimary: "Jugar Dia 03",
     heroRepo: "Ver repo en GitHub",
     panelLabel: "Build actual",
     signalPrompt: "Rastro de prompts",
-    signalPromptValue: "TaskFlow Local",
+    signalPromptValue: "Debugger Mental",
     signalBuild: "Modo de build",
     signalShip: "Estado",
-    signalToday: "Día 02 activo",
+    signalToday: "Dia 03 activo",
     aboutEyebrow: "Por qué existe",
     aboutTitle: "Un archivo diario de práctica publicada.",
     aboutText:
@@ -118,11 +122,11 @@ const translations = {
     projectsTitle: "Proyectos diarios",
     projectsRepo: "Abrir repositorio",
     projectOpen: "Abrir proyecto",
-    projectScreenshotAlt: "Captura de la aplicacion TaskFlow Local",
-    previewEyebrow: "Vista del Día 02",
-    previewTitle: "TaskFlow Local ya está en el archivo.",
-    previewLink: "Abrir landing de TaskFlow",
-    previewCaption: "Una bitácora local de escritorio para clientes, proyectos, entradas, reportes y un asistente que funciona con texto o fallback de voz.",
+    projectScreenshotAlt: "Captura del proyecto",
+    previewEyebrow: "Vista del Dia 03",
+    previewTitle: "Debugger Mental ya esta en el archivo.",
+    previewLink: "Abrir Debugger Mental",
+    previewCaption: "Puzzle bilingue de navegador sobre estabilizar sistemas mentales abstractos con tarjetas, conexiones, recursos, eventos y guardado local.",
     philosophyEyebrow: "Filosofía de prompts",
     philosophyTitle: "Promptar es el oficio. Publicar es la prueba.",
     principleOneTitle: "Definir el marco",
@@ -162,10 +166,13 @@ const translations = {
         screenshot: "assets/taskflow-local-screenshot.png"
       },
       {
-        day: "Día 03",
-        title: "Próximo build",
-        description: "Otro experimento breve, documentado de prompt a proyecto.",
-        status: "Planeado"
+        day: "Dia 03",
+        title: "Debugger Mental",
+        description: "Puzzle bilingue de navegador para estabilizar sistemas mentales abstractos con tarjetas, conexiones, acciones, eventos y partidas guardadas.",
+        status: "Activo",
+        url: debuggerMentalUrl,
+        screenshot: "assets/debugger-mental-screenshot.png",
+        screenshotAlt: "Captura del juego Debugger Mental"
       }
     ]
   },
@@ -185,14 +192,14 @@ const translations = {
     heroTitleLineTwo: "Progetti fuori.",
     heroText:
       "Un progetto assistito dall'IA ogni giorno. La funzione non è sempre IA; la pratica è prompt, iterazione e pubblicazione con tracce.",
-    heroPrimary: "Esplora Giorno 02",
+    heroPrimary: "Gioca Giorno 03",
     heroRepo: "Vedi repo GitHub",
     panelLabel: "Build attuale",
     signalPrompt: "Traccia prompt",
-    signalPromptValue: "TaskFlow Local",
+    signalPromptValue: "Debugger Mental",
     signalBuild: "Modalità build",
     signalShip: "Stato",
-    signalToday: "Giorno 02 online",
+    signalToday: "Giorno 03 online",
     aboutEyebrow: "Perché esiste",
     aboutTitle: "Un archivio quotidiano di pratica pubblicata.",
     aboutText:
@@ -201,11 +208,11 @@ const translations = {
     projectsTitle: "Progetti quotidiani",
     projectsRepo: "Apri repository",
     projectOpen: "Apri progetto",
-    projectScreenshotAlt: "Screenshot dell app TaskFlow Local",
-    previewEyebrow: "Anteprima Giorno 02",
-    previewTitle: "TaskFlow Local e ora nell archivio.",
-    previewLink: "Apri la landing TaskFlow",
-    previewCaption: "Un diario desktop locale per clienti, progetti, voci, report e un assistente con testo o fallback vocale.",
+    projectScreenshotAlt: "Screenshot del progetto",
+    previewEyebrow: "Anteprima Giorno 03",
+    previewTitle: "Debugger Mental e ora nell archivio.",
+    previewLink: "Apri Debugger Mental",
+    previewCaption: "Puzzle browser bilingue per stabilizzare sistemi mentali astratti con carte, connessioni, risorse, eventi e salvataggi locali.",
     philosophyEyebrow: "Filosofia dei prompt",
     philosophyTitle: "Il prompt è il mestiere. La pubblicazione è la prova.",
     principleOneTitle: "Imposta il frame",
@@ -246,9 +253,12 @@ const translations = {
       },
       {
         day: "Giorno 03",
-        title: "Prossimo build",
-        description: "Un altro esperimento compatto, documentato da prompt a progetto.",
-        status: "Pianificato"
+        title: "Debugger Mental",
+        description: "Puzzle browser bilingue per stabilizzare sistemi mentali astratti con carte, connessioni, azioni, eventi e partite salvate.",
+        status: "Online",
+        url: debuggerMentalUrl,
+        screenshot: "assets/debugger-mental-screenshot.png",
+        screenshotAlt: "Screenshot del gioco Debugger Mental"
       }
     ]
   },
@@ -268,14 +278,14 @@ const translations = {
     heroTitleLineTwo: "Projets livrés.",
     heroText:
       "Un projet assisté par IA chaque jour. La fonction n'est pas toujours IA; la pratique, c'est prompter, itérer et livrer avec des traces.",
-    heroPrimary: "Explorer Jour 02",
+    heroPrimary: "Jouer Jour 03",
     heroRepo: "Voir le repo GitHub",
     panelLabel: "Build actuel",
     signalPrompt: "Trace des prompts",
-    signalPromptValue: "TaskFlow Local",
+    signalPromptValue: "Debugger Mental",
     signalBuild: "Mode build",
     signalShip: "État",
-    signalToday: "Jour 02 en ligne",
+    signalToday: "Jour 03 en ligne",
     aboutEyebrow: "Pourquoi ça existe",
     aboutTitle: "Une archive quotidienne de pratique livrée.",
     aboutText:
@@ -284,11 +294,11 @@ const translations = {
     projectsTitle: "Projets quotidiens",
     projectsRepo: "Ouvrir le dépôt",
     projectOpen: "Ouvrir le projet",
-    projectScreenshotAlt: "Capture de l application TaskFlow Local",
-    previewEyebrow: "Apercu Jour 02",
-    previewTitle: "TaskFlow Local est maintenant dans l archive.",
-    previewLink: "Ouvrir la landing TaskFlow",
-    previewCaption: "Un journal desktop local pour clients, projets, entrees, rapports et un assistant avec texte ou repli vocal.",
+    projectScreenshotAlt: "Capture du projet",
+    previewEyebrow: "Apercu Jour 03",
+    previewTitle: "Debugger Mental est maintenant dans l archive.",
+    previewLink: "Ouvrir Debugger Mental",
+    previewCaption: "Puzzle navigateur bilingue pour stabiliser des systemes mentaux abstraits avec cartes, connexions, ressources, evenements et sauvegardes locales.",
     philosophyEyebrow: "Philosophie du prompt",
     philosophyTitle: "Le prompt est le métier. La livraison est la preuve.",
     principleOneTitle: "Poser le cadre",
@@ -329,9 +339,12 @@ const translations = {
       },
       {
         day: "Jour 03",
-        title: "Prochain build",
-        description: "Une autre expérience compacte, documentée du prompt au projet.",
-        status: "Prévu"
+        title: "Debugger Mental",
+        description: "Puzzle navigateur bilingue pour stabiliser des systemes mentaux abstraits avec cartes, connexions, actions, evenements et parties sauvegardees.",
+        status: "En ligne",
+        url: debuggerMentalUrl,
+        screenshot: "assets/debugger-mental-screenshot.png",
+        screenshotAlt: "Capture du jeu Debugger Mental"
       }
     ]
   },
@@ -351,14 +364,14 @@ const translations = {
     heroTitleLineTwo: "Projetos saem.",
     heroText:
       "Um projeto assistido por IA por dia. O recurso nem sempre é IA; a prática é criar prompts, iterar e publicar com registro.",
-    heroPrimary: "Explorar Dia 02",
+    heroPrimary: "Jogar Dia 03",
     heroRepo: "Ver repo no GitHub",
     panelLabel: "Build atual",
     signalPrompt: "Trilha de prompts",
-    signalPromptValue: "TaskFlow Local",
+    signalPromptValue: "Debugger Mental",
     signalBuild: "Modo build",
     signalShip: "Estado",
-    signalToday: "Dia 02 no ar",
+    signalToday: "Dia 03 no ar",
     aboutEyebrow: "Por que existe",
     aboutTitle: "Um arquivo diário de prática publicada.",
     aboutText:
@@ -367,11 +380,11 @@ const translations = {
     projectsTitle: "Projetos diários",
     projectsRepo: "Abrir repositório",
     projectOpen: "Abrir projeto",
-    projectScreenshotAlt: "Captura do aplicativo TaskFlow Local",
-    previewEyebrow: "Preview do Dia 02",
-    previewTitle: "TaskFlow Local ja esta no arquivo.",
-    previewLink: "Abrir landing do TaskFlow",
-    previewCaption: "Um diario local de desktop para clientes, projetos, entradas, relatorios e um assistente com texto ou fallback de voz.",
+    projectScreenshotAlt: "Captura do projeto",
+    previewEyebrow: "Preview do Dia 03",
+    previewTitle: "Debugger Mental ja esta no arquivo.",
+    previewLink: "Abrir Debugger Mental",
+    previewCaption: "Puzzle bilingue de navegador para estabilizar sistemas mentais abstratos com cartas, conexoes, recursos, eventos e salvamentos locais.",
     philosophyEyebrow: "Filosofia de prompt",
     philosophyTitle: "Promptar é o ofício. Publicar é a prova.",
     principleOneTitle: "Definir o quadro",
@@ -412,9 +425,12 @@ const translations = {
       },
       {
         day: "Dia 03",
-        title: "Próximo build",
-        description: "Outro experimento compacto, documentado de prompt a projeto.",
-        status: "Planejado"
+        title: "Debugger Mental",
+        description: "Puzzle bilingue de navegador para estabilizar sistemas mentais abstratos com cartas, conexoes, acoes, eventos e partidas salvas.",
+        status: "No ar",
+        url: debuggerMentalUrl,
+        screenshot: "assets/debugger-mental-screenshot.png",
+        screenshotAlt: "Captura do jogo Debugger Mental"
       }
     ]
   }

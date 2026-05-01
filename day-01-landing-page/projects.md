@@ -16,9 +16,13 @@ Landing: ../dia-2-taskflow-local/landing/index.html
 
 Project folder: ../dia-2-taskflow-local/
 
-## Day 03 - Placeholder
+## Day 03 - Debugger Mental
 
-Future project entry.
+Bilingual browser puzzle for debugging abstract mental systems with nodes, connections, limited resources, random events, and localStorage saves.
+
+Landing and game: ../dia-3-debugger-mental/index.html
+
+Project folder: ../dia-3-debugger-mental/
 
 ## Day 04 - Placeholder
 
