@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="TaskFlow Local es una app de escritorio para registrar trabajo realizado y solicitudes de clientes en una bitacora SQLite local." />
+    <meta name="author" content="Pancratzia" />
+    <meta name="theme-color" content="#f7f2e8" />
+    <title>TaskFlow Local | Bitacora local de trabajo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+    <header class="site-header" data-animate>
+      <nav class="nav" aria-label="Navegacion principal">
+        <a class="brand" href="#">
+          <span class="brand-mark">TF</span>
+          <span>TaskFlow Local</span>
+        </a>
+        <div class="nav-actions">
+          <a href="#features" data-i18n="navFeatures">Funciones</a>
+          <a href="#privacy" data-i18n="navPrivacy">Privacidad</a>
+          <a href="#download" data-i18n="navDownload">Descarga</a>
+          <select id="language" aria-label="Idioma">
+            <option value="es">Espanol</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section">
+        <div class="hero-grid">
+          <div class="hero-copy" data-animate>
+            <p class="eyebrow" data-i18n="eyebrow">Dia 02 / Prompt-to-Project</p>
+            <h1><span data-i18n="heroOne">Bitacora local.</span><span class="highlight" data-i18n="heroTwo">Trabajo claro.</span></h1>
+            <p class="hero-text" data-i18n="heroText">TaskFlow Local registra lo que ya hiciste o lo que un cliente pidio, organizado por Usuario -> Cliente -> Proyecto -> Entradas.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#download" data-i18n="download">Descargar app</a>
+              <a class="button button-secondary" href="../README.md" data-i18n="readDocs">Ver documentacion</a>
+            </div>
+          </div>
+          <aside class="lab-panel" data-animate aria-label="Vista previa de TaskFlow Local">
+            <div class="panel-topline"><span>SQLite</span><span>OFFLINE</span></div>
+            <div class="signal-stack">
+              <div class="signal-row"><span data-i18n="signalClient">Cliente</span><strong>Gen</strong></div>
+              <div class="signal-row"><span data-i18n="signalProject">Proyecto</span><strong>Dashboard</strong></div>
+              <div class="signal-row"><span data-i18n="signalEntry">Entrada</span><strong>3h / Lunes</strong></div>
+            </div>
+            <div class="lab-geometry" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section split-section" id="what">
+        <div data-animate>
+          <p class="eyebrow" data-i18n="whatEyebrow">Que es</p>
+          <h2 data-i18n="whatTitle">No es otro gestor de tareas.</h2>
+        </div>
+        <p data-animate data-i18n="whatText">Es una bitacora de escritorio para capturar solicitudes, reuniones, seguimientos y trabajo realizado sin convertirlo en deadlines, recordatorios o tableros complejos.</p>
+      </section>
+
+      <section id="privacy" class="section">
+        <div class="section-heading" data-animate>
+          <div>
+            <p class="eyebrow" data-i18n="privacyEyebrow">Privacidad</p>
+            <h2 data-i18n="privacyTitle">Tus datos se quedan en tu maquina.</h2>
+          </div>
+        </div>
+        <div class="principle-grid">
+          <article class="principle-card" data-animate><span>01</span><h3>SQLite local</h3><p data-i18n="privacyOne">Clientes, proyectos y entradas se guardan en una base local.</p></article>
+          <article class="principle-card" data-animate><span>02</span><h3>Offline first</h3><p data-i18n="privacyTwo">La app funciona sin LLM y sin conexion obligatoria.</p></article>
+          <article class="principle-card" data-animate><span>03</span><h3>Multiusuario</h3><p data-i18n="privacyThree">Cada usuario ve solo sus propios registros.</p></article>
+        </div>
+      </section>
+
+      <section id="features" class="section project-section">
+        <div class="section-heading" data-animate>
+          <div>
+            <p class="eyebrow" data-i18n="featuresEyebrow">Funciones</p>
+            <h2 data-i18n="featuresTitle">Hecha para resumir trabajo.</h2>
+          </div>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-animate><h3 data-i18n="featureOneTitle">Clientes y proyectos</h3><p data-i18n="featureOneText">CRUD completo y relacion clara: un cliente puede tener varios proyectos.</p></article>
+          <article class="project-card" data-animate><h3 data-i18n="featureTwoTitle">Entradas de bitacora</h3><p data-i18n="featureTwoText">Titulo, descripcion, fecha, rango, horas, tipo y estado simple.</p></article>
+          <article class="project-card" data-animate><h3 data-i18n="featureThreeTitle">Reportes</h3><p data-i18n="featureThreeText">Resumen semanal, mensual, por proyecto y exportacion CSV/PDF.</p></article>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div data-animate>
+          <p class="eyebrow" data-i18n="langEyebrow">Espanol / Ingles</p>
+          <h2 data-i18n="langTitle">Interfaz bilingue, parser bilingue.</h2>
+        </div>
+        <p data-animate data-i18n="langText">Cambia manualmente el idioma de la interfaz y procesa frases simples en espanol o ingles desde el asistente.</p>
+      </section>
+
+      <section class="section split-section">
+        <div data-animate>
+          <p class="eyebrow" data-i18n="voiceEyebrow">Voz + texto</p>
+          <h2 data-i18n="voiceTitle">Dicta si puedes. Escribe siempre.</h2>
+        </div>
+        <p data-animate data-i18n="voiceText">Usa Web Speech API cuando el WebView lo soporte. Si no esta disponible, el campo manual sigue funcionando como flujo principal.</p>
+      </section>
+
+      <section id="download" class="section rules">
+        <div class="section-heading" data-animate>
+          <div>
+            <p class="eyebrow" data-i18n="downloadEyebrow">Distribucion</p>
+            <h2 data-i18n="downloadTitle">Placeholder para GitHub Releases.</h2>
+          </div>
+          <a class="button button-primary" href="https://github.com/Pancratzia/Prompt-to-Project/releases" target="_blank" rel="noopener noreferrer" data-i18n="releaseButton">Abrir Releases</a>
+        </div>
+        <ul class="rules-list" data-animate>
+          <li data-i18n="installOne">Instala Rust, Node.js y dependencias de Tauri.</li>
+          <li data-i18n="installTwo">Ejecuta npm install dentro de app/.</li>
+          <li data-i18n="installThree">Usa npm run tauri:build para generar instaladores.</li>
+          <li data-i18n="installFour">Sube los artefactos a GitHub Releases y apunta este boton al release final.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><p>Built by Pancratzia.</p><p data-i18n="footerText">Dia 02 de Prompt-to-Project.</p></div>
+      <div class="footer-links">
+        <a href="https://github.com/Pancratzia/Prompt-to-Project" target="_blank" rel="noopener noreferrer">Repo</a>
+        <a href="#main" data-i18n="backToTop">Volver arriba</a>
+      </div>
+    </footer>
+  </body>
+</html>
