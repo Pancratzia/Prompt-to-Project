@@ -4,6 +4,7 @@ type Command =
   | "register_user"
   | "login_user"
   | "update_user"
+  | "reset_user_password"
   | "list_clients"
   | "save_client"
   | "delete_client"
@@ -33,6 +34,7 @@ export const api = {
   register: (email: string, password: string) => call<User>("register_user", { email, password }),
   login: (email: string, password: string) => call<User>("login_user", { email, password }),
   updateUser: (userId: string, input: { email: string; password?: string }) => call<User>("update_user", { userId, input }),
+  resetPassword: (email: string, password: string) => call<User>("reset_user_password", { email, password }),
   clients: (userId: string) => call<Client[]>("list_clients", { userId }),
   saveClient: (userId: string, input: Partial<Client> & { name: string }) => call<Client>("save_client", { userId, input }),
   deleteClient: (userId: string, id: string) => call<void>("delete_client", { userId, id }),

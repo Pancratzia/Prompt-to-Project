@@ -495,6 +495,18 @@ h3 {
     border-color 180ms ease;
 }
 
+.project-screenshot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: -0.35rem 0 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  object-fit: cover;
+  background: var(--paper-strong);
+  box-shadow: 0 14px 34px rgba(46, 38, 29, 0.1);
+}
+
 .project-card::before,
 .principle-card::before {
   content: "";

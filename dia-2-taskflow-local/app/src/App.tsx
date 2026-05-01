@@ -162,7 +162,7 @@ function AuthScreen({ language, setLanguage, setUser, refresh, run, error }: {
   setLanguage: (language: Language) => void;
   setUser: (user: User) => void;
   refresh: (user: User) => Promise<void>;
-  run: (action: () => Promise<void>) => Promise<void>;
+  run: (action: () => Promise<void>, success?: string) => Promise<void>;
   error: string;
 }) {
   const [mode, setMode] = useState<"login" | "register">("login");
@@ -172,10 +172,19 @@ function AuthScreen({ language, setLanguage, setUser, refresh, run, error }: {
   async function submit(event: FormEvent) {
     event.preventDefault();
     await run(async () => {
-      const activeUser = mode === "login" ? await api.login(email, password) : await api.register(email, password);
+      const cleanEmail = email.trim();
+      const activeUser = mode === "login" ? await api.login(cleanEmail, password) : await api.register(cleanEmail, password);
       setUser(activeUser);
       await refresh(activeUser);
     });
+  }
+
+  async function resetPassword() {
+    await run(async () => {
+      const activeUser = await api.resetPassword(email.trim(), password);
+      setUser(activeUser);
+      await refresh(activeUser);
+    }, t(language, "passwordReset"));
   }
 
   return (
@@ -190,6 +199,12 @@ function AuthScreen({ language, setLanguage, setUser, refresh, run, error }: {
           {error && <p className="alert">{error}</p>}
           <button className="button-primary" type="submit">{t(language, mode)}</button>
         </form>
+        {mode === "login" && (
+          <div className="auth-recovery">
+            <p>{t(language, "resetPasswordHint")}</p>
+            <button type="button" onClick={resetPassword}>{t(language, "resetPassword")}</button>
+          </div>
+        )}
         <div className="auth-actions">
           <button onClick={() => setMode(mode === "login" ? "register" : "login")}>{t(language, mode === "login" ? "register" : "login")}</button>
           <select value={language} onChange={(event) => setLanguage(event.target.value as Language)}>

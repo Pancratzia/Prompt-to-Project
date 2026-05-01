@@ -326,7 +326,45 @@ app/src-tauri/target/release/bundle/nsis/
 3. Abrir GitHub Releases.
 4. Subir `.msi` y `.exe`.
 5. Publicar el release.
-6. Cambiar el boton de la landing para apuntar al release final.
+6. Confirmar que la landing apunte al release final.
+
+Rutas esperadas de los instaladores:
+
+```text
+app/src-tauri/target/release/bundle/msi/TaskFlow Local_0.1.0_x64_en-US.msi
+app/src-tauri/target/release/bundle/nsis/TaskFlow Local_0.1.0_x64-setup.exe
+```
+
+La landing ya incluye botones para GitHub Releases, Windows EXE y Windows MSI. Si el tag y los nombres de archivo coinciden con `taskflow-local-v0.1.0`, los enlaces directos deben quedar asi:
+
+```text
+https://github.com/Pancratzia/Prompt-to-Project/releases/download/taskflow-local-v0.1.0/TaskFlow%20Local_0.1.0_x64-setup.exe
+https://github.com/Pancratzia/Prompt-to-Project/releases/download/taskflow-local-v0.1.0/TaskFlow%20Local_0.1.0_x64_en-US.msi
+```
+
+Si GitHub cambia el nombre del asset al subirlo, copia la URL real desde el asset publicado y reemplazala en `landing/index.html`.
+
+## Captura de la app
+
+La landing usa una captura visual ubicada en:
+
+```text
+assets/taskflow-local-screenshot.png
+```
+
+El Dia 1 tambien referencia una copia en:
+
+```text
+../day-01-landing-page/assets/taskflow-local-screenshot.png
+```
+
+## Persistencia de cuentas locales
+
+TaskFlow Local guarda usuarios, clientes, proyectos y entradas en SQLite dentro del directorio de datos de la app. En Windows, desinstalar la aplicacion normalmente no borra ese directorio, asi que los correos registrados pueden seguir existiendo despues de reinstalar.
+
+Si una cuenta local queda en un estado donde el correo existe pero la contrasena no coincide, usa el boton `Restablecer contrasena local` en la pantalla de login. Esto actualiza el hash de esa cuenta en la base local y permite entrar sin borrar clientes, proyectos ni entradas.
+
+Tambien puedes eliminar la base manualmente si quieres empezar desde cero, pero eso borra todos los datos locales de TaskFlow.
 
 ## Verificacion realizada
 

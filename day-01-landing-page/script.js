@@ -1,5 +1,6 @@
 const repoUrl = "https://github.com/Pancratzia/Prompt-to-Project";
-const dayOneFolderUrl = "https://github.com/Pancratzia/Prompt-to-Project/tree/main/day-01-landing-page";
+const dayOneFolderUrl = "./index.html";
+const taskFlowLandingUrl = "../dia-2-taskflow-local/landing/index.html";
 
 const translations = {
   en: {
@@ -34,6 +35,7 @@ const translations = {
     projectsTitle: "Daily projects",
     projectsRepo: "Open repository",
     projectOpen: "Open project",
+    projectScreenshotAlt: "TaskFlow Local application screenshot",
     philosophyEyebrow: "Prompting philosophy",
     philosophyTitle: "Prompting is the craft. Shipping is the proof.",
     principleOneTitle: "Set the frame",
@@ -64,9 +66,11 @@ const translations = {
       },
       {
         day: "Day 02",
-        title: "Next build",
-        description: "A future project will land here with its prompt trail and notes.",
-        status: "Planned"
+        title: "TaskFlow Local",
+        description: "A local desktop work log for clients, projects, natural-language entries, reports, and offline SQLite storage.",
+        status: "Live",
+        url: taskFlowLandingUrl,
+        screenshot: "assets/taskflow-local-screenshot.png"
       },
       {
         day: "Day 03",
@@ -108,6 +112,7 @@ const translations = {
     projectsTitle: "Proyectos diarios",
     projectsRepo: "Abrir repositorio",
     projectOpen: "Abrir proyecto",
+    projectScreenshotAlt: "Captura de la aplicacion TaskFlow Local",
     philosophyEyebrow: "Filosofía de prompts",
     philosophyTitle: "Promptar es el oficio. Publicar es la prueba.",
     principleOneTitle: "Definir el marco",
@@ -137,10 +142,12 @@ const translations = {
         url: dayOneFolderUrl
       },
       {
-        day: "Día 02",
-        title: "Próximo build",
-        description: "Un proyecto futuro llegará aquí con su rastro de prompts y notas.",
-        status: "Planeado"
+        day: "Dia 02",
+        title: "TaskFlow Local",
+        description: "Bitacora local de escritorio para clientes, proyectos, entradas en lenguaje natural, reportes y SQLite offline.",
+        status: "Activo",
+        url: taskFlowLandingUrl,
+        screenshot: "assets/taskflow-local-screenshot.png"
       },
       {
         day: "Día 03",
@@ -182,6 +189,7 @@ const translations = {
     projectsTitle: "Progetti quotidiani",
     projectsRepo: "Apri repository",
     projectOpen: "Apri progetto",
+    projectScreenshotAlt: "Screenshot dell app TaskFlow Local",
     philosophyEyebrow: "Filosofia dei prompt",
     philosophyTitle: "Il prompt è il mestiere. La pubblicazione è la prova.",
     principleOneTitle: "Imposta il frame",
@@ -212,9 +220,11 @@ const translations = {
       },
       {
         day: "Giorno 02",
-        title: "Prossimo build",
-        description: "Un progetto futuro arriverà qui con traccia prompt e note.",
-        status: "Pianificato"
+        title: "TaskFlow Local",
+        description: "Diario desktop locale per clienti, progetti, voci in linguaggio naturale, report e SQLite offline.",
+        status: "Online",
+        url: taskFlowLandingUrl,
+        screenshot: "assets/taskflow-local-screenshot.png"
       },
       {
         day: "Giorno 03",
@@ -256,6 +266,7 @@ const translations = {
     projectsTitle: "Projets quotidiens",
     projectsRepo: "Ouvrir le dépôt",
     projectOpen: "Ouvrir le projet",
+    projectScreenshotAlt: "Capture de l application TaskFlow Local",
     philosophyEyebrow: "Philosophie du prompt",
     philosophyTitle: "Le prompt est le métier. La livraison est la preuve.",
     principleOneTitle: "Poser le cadre",
@@ -286,9 +297,11 @@ const translations = {
       },
       {
         day: "Jour 02",
-        title: "Prochain build",
-        description: "Un futur projet arrivera ici avec sa trace de prompts et ses notes.",
-        status: "Prévu"
+        title: "TaskFlow Local",
+        description: "Journal de travail local pour clients, projets, saisie naturelle, rapports et stockage SQLite hors ligne.",
+        status: "En ligne",
+        url: taskFlowLandingUrl,
+        screenshot: "assets/taskflow-local-screenshot.png"
       },
       {
         day: "Jour 03",
@@ -330,6 +343,7 @@ const translations = {
     projectsTitle: "Projetos diários",
     projectsRepo: "Abrir repositório",
     projectOpen: "Abrir projeto",
+    projectScreenshotAlt: "Captura do aplicativo TaskFlow Local",
     philosophyEyebrow: "Filosofia de prompt",
     philosophyTitle: "Promptar é o ofício. Publicar é a prova.",
     principleOneTitle: "Definir o quadro",
@@ -360,9 +374,11 @@ const translations = {
       },
       {
         day: "Dia 02",
-        title: "Próximo build",
-        description: "Um projeto futuro chegará aqui com trilha de prompts e notas.",
-        status: "Planejado"
+        title: "TaskFlow Local",
+        description: "Diario local de desktop para clientes, projetos, entradas em linguagem natural, relatorios e SQLite offline.",
+        status: "No ar",
+        url: taskFlowLandingUrl,
+        screenshot: "assets/taskflow-local-screenshot.png"
       },
       {
         day: "Dia 03",
@@ -384,11 +400,15 @@ function renderProjects(language) {
   projectGrid.innerHTML = labels.projects
     .map((project) => {
       const link = project.url
-        ? `<a class="project-link" href="${project.url}" target="_blank" rel="noopener noreferrer">${labels.projectOpen}</a>`
+        ? `<a class="project-link" href="${project.url}">${labels.projectOpen}</a>`
         : `<span class="project-link muted-link">${project.status}</span>`;
+      const screenshot = project.screenshot
+        ? `<img class="project-screenshot" src="${project.screenshot}" alt="${labels.projectScreenshotAlt || project.title}" loading="lazy" />`
+        : "";
 
       return `
         <article class="project-card" data-animate>
+          ${screenshot}
           <div class="project-meta">
             <span>${project.day}</span>
             <span class="status">${project.status}</span>

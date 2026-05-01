@@ -21,6 +21,7 @@
         <div class="nav-actions">
           <a href="#features" data-i18n="navFeatures">Funciones</a>
           <a href="#privacy" data-i18n="navPrivacy">Privacidad</a>
+          <a href="#preview" data-i18n="navPreview">Vista</a>
           <a href="#download" data-i18n="navDownload">Descarga</a>
           <select id="language" aria-label="Idioma">
             <option value="es">Espanol</option>
@@ -90,6 +91,19 @@
         </div>
       </section>
 
+      <section id="preview" class="section preview-section">
+        <div class="section-heading" data-animate>
+          <div>
+            <p class="eyebrow" data-i18n="previewEyebrow">Vista de la app</p>
+            <h2 data-i18n="previewTitle">Una bitacora clara para el trabajo diario.</h2>
+          </div>
+        </div>
+        <figure class="screenshot-frame" data-animate>
+          <img class="app-screenshot" src="../assets/taskflow-local-screenshot.png" alt="Captura de TaskFlow Local mostrando dashboard, bitacora y asistente" loading="lazy" />
+          <figcaption data-i18n="previewCaption">Preview de la experiencia de escritorio: resumen, clientes, proyectos, bitacora y asistente local.</figcaption>
+        </figure>
+      </section>
+
       <section class="section split-section">
         <div data-animate>
           <p class="eyebrow" data-i18n="langEyebrow">Espanol / Ingles</p>
@@ -110,9 +124,13 @@
         <div class="section-heading" data-animate>
           <div>
             <p class="eyebrow" data-i18n="downloadEyebrow">Distribucion</p>
-            <h2 data-i18n="downloadTitle">Placeholder para GitHub Releases.</h2>
+            <h2 data-i18n="downloadTitle">Descargas desde GitHub Releases.</h2>
           </div>
-          <a class="button button-primary" href="https://github.com/Pancratzia/Prompt-to-Project/releases" target="_blank" rel="noopener noreferrer" data-i18n="releaseButton">Abrir Releases</a>
+          <div class="download-actions">
+            <a class="button button-primary" href="https://github.com/Pancratzia/Prompt-to-Project/releases" target="_blank" rel="noopener noreferrer" data-i18n="releaseButton">Abrir Releases</a>
+            <a class="button button-secondary" href="https://github.com/Pancratzia/Prompt-to-Project/releases/download/taskflow-local-v0.1.0/TaskFlow%20Local_0.1.0_x64-setup.exe" data-i18n="exeButton">Windows EXE</a>
+            <a class="button button-secondary" href="https://github.com/Pancratzia/Prompt-to-Project/releases/download/taskflow-local-v0.1.0/TaskFlow%20Local_0.1.0_x64_en-US.msi" data-i18n="msiButton">Windows MSI</a>
+          </div>
         </div>
         <ul class="rules-list" data-animate>
           <li data-i18n="installOne">Instala Rust, Node.js y dependencias de Tauri.</li>

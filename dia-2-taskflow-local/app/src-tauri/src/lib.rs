@@ -140,6 +140,18 @@ fn password_hasher() -> Argon2<'static> {
     Argon2::new(Algorithm::Argon2id, Version::V0x13, params)
 }
 
+fn normalize_email(email: &str) -> String {
+    email.trim().to_lowercase()
+}
+
+fn hash_password(password: &str) -> Result<String, AppError> {
+    let salt = SaltString::generate(&mut OsRng);
+    password_hasher()
+        .hash_password(password.as_bytes(), &salt)
+        .map_err(|_| AppError::Password)
+        .map(|hash| hash.to_string())
+}
+
 fn db_path(app: &tauri::AppHandle) -> Result<PathBuf, AppError> {
     let dir = app.path().app_data_dir().map_err(|_| AppError::MissingDataDir)?;
     fs::create_dir_all(&dir)?;
@@ -213,6 +225,7 @@ fn state_conn<'a>(state: &'a tauri::State<AppState>) -> Result<std::sync::MutexG
 
 #[tauri::command]
 fn register_user(state: tauri::State<AppState>, email: String, password: String) -> Result<User, AppError> {
+    let email = normalize_email(&email);
     if password.len() < 8 || !email.contains('@') {
         return Err(AppError::InvalidCredentials);
     }
@@ -223,11 +236,7 @@ fn register_user(state: tauri::State<AppState>, email: String, password: String)
     }
     let id = Uuid::new_v4().to_string();
     let created = now();
-    let salt = SaltString::generate(&mut OsRng);
-    let hash = password_hasher()
-        .hash_password(password.as_bytes(), &salt)
-        .map_err(|_| AppError::Password)?
-        .to_string();
+    let hash = hash_password(&password)?;
     conn.execute(
         "INSERT INTO users (id, email, password_hash, created_at) VALUES (?1, ?2, ?3, ?4)",
         params![id, email, hash, created],
@@ -237,6 +246,7 @@ fn register_user(state: tauri::State<AppState>, email: String, password: String)
 
 #[tauri::command]
 fn login_user(state: tauri::State<AppState>, email: String, password: String) -> Result<User, AppError> {
+    let email = normalize_email(&email);
     let conn = state_conn(&state)?;
     let record = conn
         .query_row(
@@ -255,7 +265,8 @@ fn login_user(state: tauri::State<AppState>, email: String, password: String) ->
 
 #[tauri::command]
 fn update_user(state: tauri::State<AppState>, user_id: String, input: UserInput) -> Result<User, AppError> {
-    if !input.email.contains('@') {
+    let email = normalize_email(&input.email);
+    if !email.contains('@') {
         return Err(AppError::InvalidCredentials);
     }
     if let Some(password) = &input.password {
@@ -267,7 +278,7 @@ fn update_user(state: tauri::State<AppState>, user_id: String, input: UserInput)
     let exists: Option<String> = conn
         .query_row(
             "SELECT id FROM users WHERE lower(email) = lower(?1) AND id <> ?2",
-            params![input.email, user_id],
+            params![email, user_id],
             |row| row.get(0),
         )
         .optional()?;
@@ -275,20 +286,36 @@ fn update_user(state: tauri::State<AppState>, user_id: String, input: UserInput)
         return Err(AppError::DuplicateEmail);
     }
     if let Some(password) = input.password.filter(|value| !value.is_empty()) {
-        let salt = SaltString::generate(&mut OsRng);
-        let hash = password_hasher()
-            .hash_password(password.as_bytes(), &salt)
-            .map_err(|_| AppError::Password)?
-            .to_string();
-        conn.execute("UPDATE users SET email=?1, password_hash=?2 WHERE id=?3", params![input.email, hash, user_id])?;
+        let hash = hash_password(&password)?;
+        conn.execute("UPDATE users SET email=?1, password_hash=?2 WHERE id=?3", params![email, hash, user_id])?;
     } else {
-        conn.execute("UPDATE users SET email=?1 WHERE id=?2", params![input.email, user_id])?;
+        conn.execute("UPDATE users SET email=?1 WHERE id=?2", params![email, user_id])?;
     }
     Ok(conn.query_row(
         "SELECT id, email, created_at FROM users WHERE id=?1",
         [user_id],
         |row| Ok(User { id: row.get(0)?, email: row.get(1)?, created_at: row.get(2)? }),
     )?)
+}
+
+#[tauri::command]
+fn reset_user_password(state: tauri::State<AppState>, email: String, password: String) -> Result<User, AppError> {
+    let email = normalize_email(&email);
+    if password.len() < 8 || !email.contains('@') {
+        return Err(AppError::InvalidCredentials);
+    }
+    let conn = state_conn(&state)?;
+    let user = conn
+        .query_row(
+            "SELECT id, email, created_at FROM users WHERE lower(email) = lower(?1)",
+            [&email],
+            |row| Ok(User { id: row.get(0)?, email: row.get(1)?, created_at: row.get(2)? }),
+        )
+        .optional()?
+        .ok_or(AppError::InvalidCredentials)?;
+    let hash = hash_password(&password)?;
+    conn.execute("UPDATE users SET email=?1, password_hash=?2 WHERE id=?3", params![email, hash, user.id])?;
+    Ok(User { email, ..user })
 }
 
 #[tauri::command]
@@ -423,6 +450,7 @@ pub fn run() {
             register_user,
             login_user,
             update_user,
+            reset_user_password,
             list_clients,
             save_client,
             delete_client,

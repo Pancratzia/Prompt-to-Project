@@ -2,103 +2,104 @@
 
 Building one project per day using AI.
 
-This repo documents not only the projects, but also the prompts, iterations, and lessons behind AI-assisted development.
+This repo documents the shipped projects and the prompts, iterations, fixes, and lessons behind AI-assisted development.
 
 ## Structure
 
 Each project lives in its own folder:
 
 ```text
-/day-01-landing-page
-/day-02-...
-/day-03-...
+day-01-landing-page/
+dia-2-taskflow-local/
 ```
 
-Inside each day folder:
+## Projects
+
+### Day 01 - Landing Page
+
+Main hub for the Prompt-to-Project challenge.
+
+- Folder: [day-01-landing-page/](./day-01-landing-page/)
+- Entry point: [day-01-landing-page/index.html](./day-01-landing-page/index.html)
+- Clean route for deploys: `/day-01`
+
+### Day 02 - TaskFlow Local
+
+TaskFlow Local is a desktop work log, not a ClickUp/Asana-style task manager. It records what was already done or what a client requested, organized as User -> Client -> Project -> Log Entries.
+
+- Folder: [dia-2-taskflow-local/](./dia-2-taskflow-local/)
+- Landing: [dia-2-taskflow-local/landing/index.html](./dia-2-taskflow-local/landing/index.html)
+- Desktop app: [dia-2-taskflow-local/app/](./dia-2-taskflow-local/app/)
+- Clean routes for deploys: `/taskflow`, `/taskflow-local`, `/day-2`
+
+## Deployment
+
+The repository is ready for a static deploy from the repo root. The `_redirects` file sends the root route to Day 01 and exposes clean routes for TaskFlow.
 
 ```text
-index.html
-style.css
-script.js
-projects.md
-README.md
+/              -> /day-01-landing-page/index.html
+/day-01        -> /day-01-landing-page/index.html
+/taskflow      -> /dia-2-taskflow-local/landing/index.html
+/taskflow-local -> /dia-2-taskflow-local/landing/index.html
+/day-2         -> /dia-2-taskflow-local/landing/index.html
 ```
 
-## What this is really about
+## TaskFlow Local Releases
 
-This is a prompt engineering lab.
+To publish free installers:
 
-Each day focuses on:
+1. Build the desktop app:
+
+   ```bash
+   cd dia-2-taskflow-local/app
+   npm install
+   npm run tauri:build
+   ```
+
+2. Find the generated Windows installers:
+
+   ```text
+   app/src-tauri/target/release/bundle/msi/
+   app/src-tauri/target/release/bundle/nsis/
+   ```
+
+3. In GitHub, open the repository, go to Releases, and create a new release with a tag like:
+
+   ```text
+   taskflow-local-v0.1.0
+   ```
+
+4. Upload both artifacts:
+
+   ```text
+   TaskFlow Local_0.1.0_x64_en-US.msi
+   TaskFlow Local_0.1.0_x64-setup.exe
+   ```
+
+5. Publish the release.
+
+6. Point the landing buttons to the release assets. The expected URL shape is:
+
+   ```text
+   https://github.com/Pancratzia/Prompt-to-Project/releases/download/taskflow-local-v0.1.0/TaskFlow%20Local_0.1.0_x64-setup.exe
+   https://github.com/Pancratzia/Prompt-to-Project/releases/download/taskflow-local-v0.1.0/TaskFlow%20Local_0.1.0_x64_en-US.msi
+   ```
+
+The TaskFlow landing already includes placeholder buttons for GitHub Releases, EXE, and MSI. They will work once the matching release tag and asset filenames exist.
+
+## What This Is Really About
+
+This is a prompt engineering lab. Each day focuses on:
 
 - Writing better prompts
 - Iterating with AI
 - Understanding what works and what does not
 - Shipping fast
-
-## Tech Stack
-
-- HTML
-- CSS
-- JavaScript
-- AI-assisted development tools
-
-## Projects
-
-### Day 01 — Landing Page
-
-Main hub for the Prompt-to-Project challenge.
-
-- Project folder: [/day-01-landing-page/](./day-01-landing-page/)
-- Entry point: [/day-01-landing-page/index.html](./day-01-landing-page/index.html)
-- Approximate time spent: about 1 hour of active work.
-
-## Deployment
-
-The repository is structured for Netlify deployment from the full repo.
-
-The root route redirects to:
-
-```text
-/day-01-landing-page/index.html
-```
-
-Future days can be added as sibling routes:
-
-```text
-/day-02-...
-/day-03-...
-```
+- Keeping the build history visible
 
 ## Rules
 
-- Ship one project per day
-- Done is better than perfect
-- Document prompts used
-- Improve iteratively
-
-## Why this exists
-
-Most people use AI randomly.
-
-This repo is about using AI intentionally.
-
-## Next
-
-- Add Day 02
-- Improve the landing page archive
-- Experiment with better prompting techniques
-
-## Prompt Philosophy
-
-Good output comes from good prompts.
-
-Every project includes:
-
-- Initial prompt
-- Iterations
-- Final result
-- Lessons learned
-
-## Follow the journey
-
-New project every day.
+- Ship one focused project per day.
+- Keep prompts, lessons, and code together.
+- Use AI as a collaborator, not a gimmick.
+- Refine the prompt after seeing the result.
