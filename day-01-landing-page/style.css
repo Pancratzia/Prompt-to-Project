@@ -495,6 +495,16 @@ h3 {
     border-color 180ms ease;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.15rem;
+}
+
+.project-card.has-screenshot {
+  min-height: 24rem;
+}
+
 .project-screenshot {
   display: block;
   width: 100%;
@@ -536,6 +546,10 @@ h3 {
   margin-top: 2rem;
 }
 
+.project-card.has-screenshot h3 {
+  margin-top: 0.75rem;
+}
+
 .project-card p,
 .principle-card p {
   margin: 0.7rem 0 0;
@@ -543,10 +557,13 @@ h3 {
   text-wrap: pretty;
 }
 
+.project-card p {
+  margin-bottom: 1.35rem;
+}
+
 .project-link {
-  position: absolute;
-  left: 1.15rem;
-  bottom: 1.15rem;
+  align-self: flex-start;
+  margin-top: auto;
   color: var(--blue-dark);
   font-weight: 800;
 }
@@ -562,9 +579,29 @@ h3 {
 }
 
 .project-section,
+.preview-section,
 .philosophy,
 .rules {
   border-top: 1px solid var(--line);
+}
+
+.preview-frame {
+  margin: 0;
+}
+
+.preview-frame img {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: var(--radius);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+}
+
+.preview-frame figcaption {
+  max-width: 50rem;
+  margin-top: 1rem;
+  color: var(--muted);
 }
 
 .principle-card span {
