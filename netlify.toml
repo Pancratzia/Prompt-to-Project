@@ -1,0 +1,3 @@
+[build]
+  command = "cd dia-4-focustube-pomodoro/app && npm install && npm run build"
+  publish = "."

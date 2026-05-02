@@ -1,0 +1,83 @@
+{
+  "appTitle": "FocusTube Pomodoro",
+  "tagline": "Focus deeply. Watch only when the break begins.",
+  "language": "Language",
+  "tabs": {
+    "setup": "Daily setup",
+    "main": "Timer",
+    "dashboard": "Dashboard",
+    "history": "History",
+    "settings": "Settings"
+  },
+  "setup": {
+    "title": "Plan today's focus",
+    "pomodoros": "Pomodoros planned",
+    "focus": "Focus minutes",
+    "break": "Break minutes",
+    "required": "Required break video time",
+    "youtubeUrls": "YouTube URLs",
+    "youtubeHint": "Paste one URL per line. The app will read durations from the embedded YouTube player.",
+    "addVideos": "Load videos",
+    "duration": "Duration minutes",
+    "durationLoading": "Reading duration...",
+    "durationFallback": "Duration unavailable. Add minutes manually.",
+    "totalVideo": "Total selected video time",
+    "valid": "Enough video time for today's breaks.",
+    "invalid": "Add more video minutes to cover every planned break.",
+    "badUrl": "Invalid YouTube URL",
+    "save": "Save daily plan",
+    "saved": "Daily plan saved."
+  },
+  "main": {
+    "noPlan": "Create today's plan before starting.",
+    "task": "What are you working on?",
+    "energy": "Energy before",
+    "focusAfter": "Focus after",
+    "phaseFocus": "Focus",
+    "phaseBreak": "Break",
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Resume",
+    "complete": "Complete",
+    "cancel": "Cancel",
+    "activateVideo": "Activate video",
+    "playerLocked": "Press Start once to allow YouTube playback during breaks.",
+    "videoEnded": "Video ended. Moving to the next one.",
+    "sessionDone": "All planned Pomodoros are complete."
+  },
+  "dashboard": {
+    "completed": "Pomodoros completed",
+    "focusTime": "Total focus time",
+    "breakTime": "Total break time",
+    "completion": "Completion rate",
+    "energy": "Average energy",
+    "focus": "Average focus",
+    "video": "Video minutes consumed",
+    "suggestion": "Suggestion for next session",
+    "none": "Keep the current rhythm.",
+    "focus30": "You are sustaining strong focus. Try a 30-minute focus block.",
+    "focus20": "Protect momentum. Try a 20-minute focus block.",
+    "break8": "Energy is low. Try a 7-10 minute break."
+  },
+  "history": {
+    "empty": "No cycles logged yet.",
+    "task": "Task",
+    "status": "Status",
+    "duration": "Duration",
+    "video": "Video progress",
+    "completed": "Completed",
+    "canceled": "Canceled"
+  },
+  "settings": {
+    "title": "Defaults",
+    "defaultFocus": "Default focus minutes",
+    "defaultBreak": "Default break minutes",
+    "save": "Save settings",
+    "saved": "Settings saved."
+  },
+  "suggestions": {
+    "low": "Try calm, lofi, or ambient videos.",
+    "mid": "Try instrumental, walking, or relaxing videos.",
+    "high": "Try energetic instrumental or upbeat videos."
+  }
+}

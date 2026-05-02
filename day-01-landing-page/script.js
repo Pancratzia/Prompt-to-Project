@@ -2,6 +2,7 @@ const repoUrl = "https://github.com/Pancratzia/Prompt-to-Project";
 const dayOneFolderUrl = "./index.html";
 const taskFlowLandingUrl = "../dia-2-taskflow-local/landing/index.html";
 const debuggerMentalUrl = "../dia-3-debugger-mental/index.html";
+const focusTubeLandingUrl = "../dia-4-focustube-pomodoro/landing/index.html";
 
 const translations = {
   en: {
@@ -15,19 +16,19 @@ const translations = {
     navPhilosophy: "Method",
     navRepo: "Repo",
     languageLabel: "Language",
-    heroEyebrow: "Day 03 / Current shipped build",
+    heroEyebrow: "Day 04 / Current shipped build",
     heroTitleLineOne: "Prompts in.",
     heroTitleLineTwo: "Projects out.",
     heroText:
       "One AI-assisted project per day. The feature is not always AI; the practice is prompting, iterating, and shipping with receipts.",
-    heroPrimary: "Play Day 03",
+    heroPrimary: "Open Day 04",
     heroRepo: "View GitHub repo",
     panelLabel: "Current build",
     signalPrompt: "Prompt trail",
-    signalPromptValue: "Debugger Mental",
+    signalPromptValue: "FocusTube Pomodoro",
     signalBuild: "Build mode",
     signalShip: "Ship state",
-    signalToday: "Day 03 live",
+    signalToday: "Day 04 live",
     aboutEyebrow: "Why it exists",
     aboutTitle: "A daily archive of shipped practice.",
     aboutText:
@@ -37,10 +38,10 @@ const translations = {
     projectsRepo: "Open repository",
     projectOpen: "Open project",
     projectScreenshotAlt: "Project screenshot",
-    previewEyebrow: "Day 03 preview",
-    previewTitle: "Debugger Mental is now in the archive.",
-    previewLink: "Open Debugger Mental",
-    previewCaption: "A bilingual browser puzzle about stabilizing abstract mental systems with cards, links, resources, random events, and local saves.",
+    previewEyebrow: "Day 04 preview",
+    previewTitle: "FocusTube Pomodoro is now in the archive.",
+    previewLink: "Open FocusTube Pomodoro",
+    previewCaption: "A bilingual static Pomodoro app that plays YouTube during breaks and saves playback progress locally.",
     philosophyEyebrow: "Prompting philosophy",
     philosophyTitle: "Prompting is the craft. Shipping is the proof.",
     principleOneTitle: "Set the frame",
@@ -87,6 +88,15 @@ const translations = {
         url: debuggerMentalUrl,
         screenshot: "assets/debugger-mental-screenshot.png",
         screenshotAlt: "Debugger Mental browser game screenshot"
+      },
+      {
+        day: "Day 04",
+        title: "FocusTube Pomodoro",
+        description: "A static bilingual Pomodoro app that plays YouTube during breaks and saves video timestamps locally.",
+        status: "Live",
+        url: focusTubeLandingUrl,
+        screenshot: "assets/focustube-pomodoro-screenshot.png",
+        screenshotAlt: "FocusTube Pomodoro app screenshot"
       }
     ]
   },
@@ -101,19 +111,19 @@ const translations = {
     navPhilosophy: "Método",
     navRepo: "Repo",
     languageLabel: "Idioma",
-    heroEyebrow: "Dia 03 / Build publicado actual",
+    heroEyebrow: "Dia 04 / Build publicado actual",
     heroTitleLineOne: "Prompts entran.",
     heroTitleLineTwo: "Proyectos salen.",
     heroText:
       "Un proyecto asistido por IA cada día. La función no siempre es IA; la práctica es promptar, iterar y publicar con evidencia.",
-    heroPrimary: "Jugar Dia 03",
+    heroPrimary: "Abrir Dia 04",
     heroRepo: "Ver repo en GitHub",
     panelLabel: "Build actual",
     signalPrompt: "Rastro de prompts",
-    signalPromptValue: "Debugger Mental",
+    signalPromptValue: "FocusTube Pomodoro",
     signalBuild: "Modo de build",
     signalShip: "Estado",
-    signalToday: "Dia 03 activo",
+    signalToday: "Dia 04 activo",
     aboutEyebrow: "Por qué existe",
     aboutTitle: "Un archivo diario de práctica publicada.",
     aboutText:
@@ -123,10 +133,10 @@ const translations = {
     projectsRepo: "Abrir repositorio",
     projectOpen: "Abrir proyecto",
     projectScreenshotAlt: "Captura del proyecto",
-    previewEyebrow: "Vista del Dia 03",
-    previewTitle: "Debugger Mental ya esta en el archivo.",
-    previewLink: "Abrir Debugger Mental",
-    previewCaption: "Puzzle bilingue de navegador sobre estabilizar sistemas mentales abstractos con tarjetas, conexiones, recursos, eventos y guardado local.",
+    previewEyebrow: "Vista del Dia 04",
+    previewTitle: "FocusTube Pomodoro ya esta en el archivo.",
+    previewLink: "Abrir FocusTube Pomodoro",
+    previewCaption: "Pomodoro bilingue estatico que reproduce YouTube durante descansos y guarda el progreso localmente.",
     philosophyEyebrow: "Filosofía de prompts",
     philosophyTitle: "Promptar es el oficio. Publicar es la prueba.",
     principleOneTitle: "Definir el marco",
@@ -173,6 +183,15 @@ const translations = {
         url: debuggerMentalUrl,
         screenshot: "assets/debugger-mental-screenshot.png",
         screenshotAlt: "Captura del juego Debugger Mental"
+      },
+      {
+        day: "Dia 04",
+        title: "FocusTube Pomodoro",
+        description: "Pomodoro bilingue estatico que reproduce YouTube en descansos y guarda timestamps localmente.",
+        status: "Activo",
+        url: focusTubeLandingUrl,
+        screenshot: "assets/focustube-pomodoro-screenshot.png",
+        screenshotAlt: "Captura de FocusTube Pomodoro"
       }
     ]
   },
@@ -192,14 +211,14 @@ const translations = {
     heroTitleLineTwo: "Progetti fuori.",
     heroText:
       "Un progetto assistito dall'IA ogni giorno. La funzione non è sempre IA; la pratica è prompt, iterazione e pubblicazione con tracce.",
-    heroPrimary: "Gioca Giorno 03",
+    heroPrimary: "Apri Giorno 04",
     heroRepo: "Vedi repo GitHub",
     panelLabel: "Build attuale",
     signalPrompt: "Traccia prompt",
-    signalPromptValue: "Debugger Mental",
+    signalPromptValue: "FocusTube Pomodoro",
     signalBuild: "Modalità build",
     signalShip: "Stato",
-    signalToday: "Giorno 03 online",
+    signalToday: "Giorno 04 online",
     aboutEyebrow: "Perché esiste",
     aboutTitle: "Un archivio quotidiano di pratica pubblicata.",
     aboutText:
@@ -209,10 +228,10 @@ const translations = {
     projectsRepo: "Apri repository",
     projectOpen: "Apri progetto",
     projectScreenshotAlt: "Screenshot del progetto",
-    previewEyebrow: "Anteprima Giorno 03",
-    previewTitle: "Debugger Mental e ora nell archivio.",
-    previewLink: "Apri Debugger Mental",
-    previewCaption: "Puzzle browser bilingue per stabilizzare sistemi mentali astratti con carte, connessioni, risorse, eventi e salvataggi locali.",
+    previewEyebrow: "Anteprima Giorno 04",
+    previewTitle: "FocusTube Pomodoro e ora nell archivio.",
+    previewLink: "Apri FocusTube Pomodoro",
+    previewCaption: "Pomodoro statico bilingue che riproduce YouTube durante le pause e salva il progresso localmente.",
     philosophyEyebrow: "Filosofia dei prompt",
     philosophyTitle: "Il prompt è il mestiere. La pubblicazione è la prova.",
     principleOneTitle: "Imposta il frame",
@@ -259,6 +278,15 @@ const translations = {
         url: debuggerMentalUrl,
         screenshot: "assets/debugger-mental-screenshot.png",
         screenshotAlt: "Screenshot del gioco Debugger Mental"
+      },
+      {
+        day: "Giorno 04",
+        title: "FocusTube Pomodoro",
+        description: "Pomodoro statico bilingue che riproduce YouTube durante le pause e salva timestamp localmente.",
+        status: "Online",
+        url: focusTubeLandingUrl,
+        screenshot: "assets/focustube-pomodoro-screenshot.png",
+        screenshotAlt: "Screenshot di FocusTube Pomodoro"
       }
     ]
   },
@@ -278,14 +306,14 @@ const translations = {
     heroTitleLineTwo: "Projets livrés.",
     heroText:
       "Un projet assisté par IA chaque jour. La fonction n'est pas toujours IA; la pratique, c'est prompter, itérer et livrer avec des traces.",
-    heroPrimary: "Jouer Jour 03",
+    heroPrimary: "Ouvrir Jour 04",
     heroRepo: "Voir le repo GitHub",
     panelLabel: "Build actuel",
     signalPrompt: "Trace des prompts",
-    signalPromptValue: "Debugger Mental",
+    signalPromptValue: "FocusTube Pomodoro",
     signalBuild: "Mode build",
     signalShip: "État",
-    signalToday: "Jour 03 en ligne",
+    signalToday: "Jour 04 en ligne",
     aboutEyebrow: "Pourquoi ça existe",
     aboutTitle: "Une archive quotidienne de pratique livrée.",
     aboutText:
@@ -295,10 +323,10 @@ const translations = {
     projectsRepo: "Ouvrir le dépôt",
     projectOpen: "Ouvrir le projet",
     projectScreenshotAlt: "Capture du projet",
-    previewEyebrow: "Apercu Jour 03",
-    previewTitle: "Debugger Mental est maintenant dans l archive.",
-    previewLink: "Ouvrir Debugger Mental",
-    previewCaption: "Puzzle navigateur bilingue pour stabiliser des systemes mentaux abstraits avec cartes, connexions, ressources, evenements et sauvegardes locales.",
+    previewEyebrow: "Apercu Jour 04",
+    previewTitle: "FocusTube Pomodoro est maintenant dans l archive.",
+    previewLink: "Ouvrir FocusTube Pomodoro",
+    previewCaption: "Pomodoro statique bilingue qui lit YouTube pendant les pauses et sauvegarde la progression localement.",
     philosophyEyebrow: "Philosophie du prompt",
     philosophyTitle: "Le prompt est le métier. La livraison est la preuve.",
     principleOneTitle: "Poser le cadre",
@@ -345,6 +373,15 @@ const translations = {
         url: debuggerMentalUrl,
         screenshot: "assets/debugger-mental-screenshot.png",
         screenshotAlt: "Capture du jeu Debugger Mental"
+      },
+      {
+        day: "Jour 04",
+        title: "FocusTube Pomodoro",
+        description: "Pomodoro statique bilingue qui lit YouTube pendant les pauses et sauvegarde les timestamps localement.",
+        status: "En ligne",
+        url: focusTubeLandingUrl,
+        screenshot: "assets/focustube-pomodoro-screenshot.png",
+        screenshotAlt: "Capture de FocusTube Pomodoro"
       }
     ]
   },
@@ -364,14 +401,14 @@ const translations = {
     heroTitleLineTwo: "Projetos saem.",
     heroText:
       "Um projeto assistido por IA por dia. O recurso nem sempre é IA; a prática é criar prompts, iterar e publicar com registro.",
-    heroPrimary: "Jogar Dia 03",
+    heroPrimary: "Abrir Dia 04",
     heroRepo: "Ver repo no GitHub",
     panelLabel: "Build atual",
     signalPrompt: "Trilha de prompts",
-    signalPromptValue: "Debugger Mental",
+    signalPromptValue: "FocusTube Pomodoro",
     signalBuild: "Modo build",
     signalShip: "Estado",
-    signalToday: "Dia 03 no ar",
+    signalToday: "Dia 04 no ar",
     aboutEyebrow: "Por que existe",
     aboutTitle: "Um arquivo diário de prática publicada.",
     aboutText:
@@ -381,10 +418,10 @@ const translations = {
     projectsRepo: "Abrir repositório",
     projectOpen: "Abrir projeto",
     projectScreenshotAlt: "Captura do projeto",
-    previewEyebrow: "Preview do Dia 03",
-    previewTitle: "Debugger Mental ja esta no arquivo.",
-    previewLink: "Abrir Debugger Mental",
-    previewCaption: "Puzzle bilingue de navegador para estabilizar sistemas mentais abstratos com cartas, conexoes, recursos, eventos e salvamentos locais.",
+    previewEyebrow: "Preview do Dia 04",
+    previewTitle: "FocusTube Pomodoro ja esta no arquivo.",
+    previewLink: "Abrir FocusTube Pomodoro",
+    previewCaption: "Pomodoro estatico bilingue que reproduz YouTube nas pausas e salva o progresso localmente.",
     philosophyEyebrow: "Filosofia de prompt",
     philosophyTitle: "Promptar é o ofício. Publicar é a prova.",
     principleOneTitle: "Definir o quadro",
@@ -431,6 +468,15 @@ const translations = {
         url: debuggerMentalUrl,
         screenshot: "assets/debugger-mental-screenshot.png",
         screenshotAlt: "Captura do jogo Debugger Mental"
+      },
+      {
+        day: "Dia 04",
+        title: "FocusTube Pomodoro",
+        description: "Pomodoro estatico bilingue que reproduz YouTube nas pausas e salva timestamps localmente.",
+        status: "No ar",
+        url: focusTubeLandingUrl,
+        screenshot: "assets/focustube-pomodoro-screenshot.png",
+        screenshotAlt: "Captura do FocusTube Pomodoro"
       }
     ]
   }

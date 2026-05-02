@@ -12,6 +12,7 @@ Each project lives in its own folder:
 day-01-landing-page/
 dia-2-taskflow-local/
 dia-3-debugger-mental/
+dia-4-focustube-pomodoro/
 ```
 
 ## Projects
@@ -41,6 +42,15 @@ Debugger Mental is a bilingual browser puzzle about stabilizing abstract mental 
 - Entry point: [dia-3-debugger-mental/index.html](./dia-3-debugger-mental/index.html)
 - Clean routes for deploys: `/debugger-mental`, `/debugger`, `/day-3`
 
+### Day 04 - FocusTube Pomodoro
+
+FocusTube Pomodoro is a bilingual static Pomodoro app that plays YouTube only during breaks, saves playback timestamps between breaks, and stores all data locally in `localStorage`.
+
+- Folder: [dia-4-focustube-pomodoro/](./dia-4-focustube-pomodoro/)
+- Landing: [dia-4-focustube-pomodoro/landing/index.html](./dia-4-focustube-pomodoro/landing/index.html)
+- Static app: [dia-4-focustube-pomodoro/app/dist/index.html](./dia-4-focustube-pomodoro/app/dist/index.html)
+- Clean routes for deploys: `/focustube`, `/focustube-app`, `/day-4`
+
 ## Deployment
 
 The repository is ready for a static deploy from the repo root. The `_redirects` file sends the root route to Day 01 and exposes clean routes for each shipped project.
@@ -54,6 +64,9 @@ The repository is ready for a static deploy from the repo root. The `_redirects`
 /debugger-mental -> /dia-3-debugger-mental/index.html
 /debugger      -> /dia-3-debugger-mental/index.html
 /day-3         -> /dia-3-debugger-mental/index.html
+/focustube     -> /dia-4-focustube-pomodoro/landing/index.html
+/focustube-app -> /dia-4-focustube-pomodoro/app/dist/index.html
+/day-4         -> /dia-4-focustube-pomodoro/landing/index.html
 ```
 
 ## TaskFlow Local Releases

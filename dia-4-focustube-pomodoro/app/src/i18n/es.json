@@ -1,0 +1,83 @@
+{
+  "appTitle": "FocusTube Pomodoro",
+  "tagline": "Concéntrate a fondo. Mira video solo cuando empieza el descanso.",
+  "language": "Idioma",
+  "tabs": {
+    "setup": "Configuración diaria",
+    "main": "Temporizador",
+    "dashboard": "Panel",
+    "history": "Historial",
+    "settings": "Ajustes"
+  },
+  "setup": {
+    "title": "Planifica el enfoque de hoy",
+    "pomodoros": "Pomodoros planeados",
+    "focus": "Minutos de enfoque",
+    "break": "Minutos de descanso",
+    "required": "Tiempo requerido de video para descansos",
+    "youtubeUrls": "URLs de YouTube",
+    "youtubeHint": "Pega una URL por línea. La app leerá las duraciones desde el reproductor embebido de YouTube.",
+    "addVideos": "Cargar videos",
+    "duration": "Minutos de duración",
+    "durationLoading": "Leyendo duración...",
+    "durationFallback": "Duración no disponible. Agrega los minutos manualmente.",
+    "totalVideo": "Tiempo total de videos seleccionados",
+    "valid": "Hay suficiente video para los descansos de hoy.",
+    "invalid": "Agrega más minutos de video para cubrir todos los descansos.",
+    "badUrl": "URL de YouTube inválida",
+    "save": "Guardar plan diario",
+    "saved": "Plan diario guardado."
+  },
+  "main": {
+    "noPlan": "Crea el plan de hoy antes de comenzar.",
+    "task": "¿En qué estás trabajando?",
+    "energy": "Energía antes",
+    "focusAfter": "Enfoque después",
+    "phaseFocus": "Enfoque",
+    "phaseBreak": "Descanso",
+    "start": "Iniciar",
+    "pause": "Pausar",
+    "resume": "Continuar",
+    "complete": "Completar",
+    "cancel": "Cancelar",
+    "activateVideo": "Activar video",
+    "playerLocked": "Presiona Iniciar una vez para permitir la reproducción de YouTube durante los descansos.",
+    "videoEnded": "El video terminó. Pasando al siguiente.",
+    "sessionDone": "Todos los Pomodoros planeados están completos."
+  },
+  "dashboard": {
+    "completed": "Pomodoros completados",
+    "focusTime": "Tiempo total de enfoque",
+    "breakTime": "Tiempo total de descanso",
+    "completion": "Tasa de finalización",
+    "energy": "Energía promedio",
+    "focus": "Enfoque promedio",
+    "video": "Minutos de video consumidos",
+    "suggestion": "Sugerencia para la próxima sesión",
+    "none": "Mantén el ritmo actual.",
+    "focus30": "Estás sosteniendo buen enfoque. Prueba bloques de 30 minutos.",
+    "focus20": "Protege el impulso. Prueba bloques de 20 minutos.",
+    "break8": "La energía está baja. Prueba descansos de 7 a 10 minutos."
+  },
+  "history": {
+    "empty": "Aún no hay ciclos registrados.",
+    "task": "Tarea",
+    "status": "Estado",
+    "duration": "Duración",
+    "video": "Progreso de video",
+    "completed": "Completado",
+    "canceled": "Cancelado"
+  },
+  "settings": {
+    "title": "Valores predeterminados",
+    "defaultFocus": "Minutos de enfoque predeterminados",
+    "defaultBreak": "Minutos de descanso predeterminados",
+    "save": "Guardar ajustes",
+    "saved": "Ajustes guardados."
+  },
+  "suggestions": {
+    "low": "Prueba videos calmados, lofi o ambientales.",
+    "mid": "Prueba videos instrumentales, de caminata o relajantes.",
+    "high": "Prueba videos instrumentales energéticos o animados."
+  }
+}
