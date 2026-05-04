@@ -24,10 +24,18 @@ Landing and game: ../dia-3-debugger-mental/index.html
 
 Project folder: ../dia-3-debugger-mental/
 
-## Day 04 - Placeholder
+## Day 04 - FocusTube Pomodoro
 
-Future project entry.
+Static bilingual Pomodoro app that plays YouTube only during breaks, saves playback timestamps between breaks, and stores all data locally.
 
-## Day 05 - Placeholder
+Landing: ../dia-4-focustube-pomodoro/landing/index.html
 
-Future project entry.
+Project folder: ../dia-4-focustube-pomodoro/
+
+## Day 05 - Weather + Routine Dashboard
+
+Bilingual browser dashboard for current weather, weather-based daily suggestions, dynamic visual themes, and a local daily task list.
+
+Landing and app: ../dia-5-weather-routine-dashboard/index.html
+
+Project folder: ../dia-5-weather-routine-dashboard/

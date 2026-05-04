@@ -604,6 +604,86 @@ h3 {
   color: var(--muted);
 }
 
+.weather-preview-frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 0.9fr);
+  gap: 1rem;
+  min-height: 25rem;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 16% 18%, rgba(255, 208, 121, 0.95), transparent 18rem),
+    linear-gradient(135deg, #fff4d8, #eef8fb 58%, #dce8ef);
+  box-shadow: var(--shadow);
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.weather-preview-card {
+  display: grid;
+  align-content: center;
+  min-height: 11rem;
+  border: 1px solid rgba(21, 21, 20, 0.11);
+  border-radius: var(--radius);
+  background: rgba(255, 250, 241, 0.72);
+  padding: 1.1rem;
+  box-shadow: 0 16px 42px rgba(46, 38, 29, 0.09);
+  backdrop-filter: blur(18px);
+}
+
+.weather-preview-card.large {
+  position: relative;
+  grid-row: span 2;
+  overflow: hidden;
+}
+
+.weather-preview-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.weather-preview-card strong {
+  margin-top: 1.4rem;
+  font-size: clamp(4.4rem, 10vw, 7rem);
+  line-height: 0.9;
+}
+
+.weather-preview-card > span:not(.preview-sun) {
+  color: var(--blue-dark);
+  font-weight: 850;
+}
+
+.preview-sun {
+  position: absolute;
+  right: 1.3rem;
+  top: 1.3rem;
+  width: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f9b233;
+  box-shadow: 0 0 0 1.2rem rgba(249, 178, 51, 0.18);
+}
+
+.weather-preview-card.tasks {
+  gap: 0.8rem;
+}
+
+.weather-preview-card.tasks span {
+  display: block;
+  width: 100%;
+  height: 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue-dark), rgba(29, 94, 120, 0.18));
+}
+
+.weather-preview-card.tasks span:nth-child(2) {
+  width: 74%;
+}
+
+.weather-preview-card.tasks span:nth-child(3) {
+  width: 48%;
+}
+
 .principle-card span {
   display: inline-block;
   margin-bottom: 2rem;
@@ -714,6 +794,7 @@ h3 {
   .split-section,
   .project-grid,
   .principle-grid,
+  .weather-preview-frame,
   .rules-list {
     grid-template-columns: 1fr;
   }

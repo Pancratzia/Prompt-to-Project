@@ -13,6 +13,7 @@ day-01-landing-page/
 dia-2-taskflow-local/
 dia-3-debugger-mental/
 dia-4-focustube-pomodoro/
+dia-5-weather-routine-dashboard/
 ```
 
 ## Projects
@@ -51,6 +52,14 @@ FocusTube Pomodoro is a bilingual static Pomodoro app that plays YouTube only du
 - Static app: [dia-4-focustube-pomodoro/app/dist/index.html](./dia-4-focustube-pomodoro/app/dist/index.html)
 - Clean routes for deploys: `/focustube`, `/focustube-app`, `/day-4`
 
+### Day 05 - Weather + Routine Dashboard
+
+Weather + Routine Dashboard is a bilingual static browser app that uses Open-Meteo for current weather, changes its visual theme based on conditions, and stores a daily task list locally.
+
+- Folder: [dia-5-weather-routine-dashboard/](./dia-5-weather-routine-dashboard/)
+- Entry point: [dia-5-weather-routine-dashboard/index.html](./dia-5-weather-routine-dashboard/index.html)
+- Clean routes for deploys: `/weather-routine`, `/day-5`
+
 ## Deployment
 
 The repository is ready for a static deploy from the repo root. The `_redirects` file sends the root route to Day 01 and exposes clean routes for each shipped project.
@@ -67,6 +76,8 @@ The repository is ready for a static deploy from the repo root. The `_redirects`
 /focustube     -> /dia-4-focustube-pomodoro/landing/index.html
 /focustube-app -> /dia-4-focustube-pomodoro/app/dist/index.html
 /day-4         -> /dia-4-focustube-pomodoro/landing/index.html
+/weather-routine -> /dia-5-weather-routine-dashboard/index.html
+/day-5         -> /dia-5-weather-routine-dashboard/index.html
 ```
 
 ## TaskFlow Local Releases

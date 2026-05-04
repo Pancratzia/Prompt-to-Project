@@ -3,6 +3,7 @@ const dayOneFolderUrl = "./index.html";
 const taskFlowLandingUrl = "../dia-2-taskflow-local/landing/index.html";
 const debuggerMentalUrl = "../dia-3-debugger-mental/index.html";
 const focusTubeLandingUrl = "../dia-4-focustube-pomodoro/landing/index.html";
+const weatherRoutineUrl = "../dia-5-weather-routine-dashboard/index.html";
 
 const translations = {
   en: {
@@ -16,19 +17,19 @@ const translations = {
     navPhilosophy: "Method",
     navRepo: "Repo",
     languageLabel: "Language",
-    heroEyebrow: "Day 04 / Current shipped build",
+    heroEyebrow: "Day 05 / Current shipped build",
     heroTitleLineOne: "Prompts in.",
     heroTitleLineTwo: "Projects out.",
     heroText:
       "One AI-assisted project per day. The feature is not always AI; the practice is prompting, iterating, and shipping with receipts.",
-    heroPrimary: "Open Day 04",
+    heroPrimary: "Open Day 05",
     heroRepo: "View GitHub repo",
     panelLabel: "Current build",
     signalPrompt: "Prompt trail",
-    signalPromptValue: "FocusTube Pomodoro",
+    signalPromptValue: "Weather + Routine",
     signalBuild: "Build mode",
     signalShip: "Ship state",
-    signalToday: "Day 04 live",
+    signalToday: "Day 05 live",
     aboutEyebrow: "Why it exists",
     aboutTitle: "A daily archive of shipped practice.",
     aboutText:
@@ -38,10 +39,14 @@ const translations = {
     projectsRepo: "Open repository",
     projectOpen: "Open project",
     projectScreenshotAlt: "Project screenshot",
-    previewEyebrow: "Day 04 preview",
-    previewTitle: "FocusTube Pomodoro is now in the archive.",
-    previewLink: "Open FocusTube Pomodoro",
-    previewCaption: "A bilingual static Pomodoro app that plays YouTube during breaks and saves playback progress locally.",
+    previewEyebrow: "Day 05 preview",
+    previewTitle: "Weather + Routine Dashboard is now in the archive.",
+    previewLink: "Open Weather + Routine",
+    previewCaption: "A bilingual weather dashboard with local tasks, Open-Meteo data, and weather-based visual themes.",
+    previewMockLabel: "Weather dashboard preview",
+    previewMockLocation: "Madrid, Spain",
+    previewMockCondition: "Clear sky",
+    previewMockSuggestion: "Today is a good day to take a walk and handle one outdoor errand.",
     philosophyEyebrow: "Prompting philosophy",
     philosophyTitle: "Prompting is the craft. Shipping is the proof.",
     principleOneTitle: "Set the frame",
@@ -97,6 +102,14 @@ const translations = {
         url: focusTubeLandingUrl,
         screenshot: "assets/focustube-pomodoro-screenshot.png",
         screenshotAlt: "FocusTube Pomodoro app screenshot"
+      },
+      {
+        day: "Day 05",
+        title: "Weather + Routine Dashboard",
+        description: "A bilingual weather dashboard with Open-Meteo, dynamic weather themes, daily suggestions, and local tasks.",
+        status: "Live",
+        url: weatherRoutineUrl,
+        screenshotAlt: "Weather and routine dashboard preview"
       }
     ]
   },
@@ -111,19 +124,19 @@ const translations = {
     navPhilosophy: "Método",
     navRepo: "Repo",
     languageLabel: "Idioma",
-    heroEyebrow: "Dia 04 / Build publicado actual",
+    heroEyebrow: "Dia 05 / Build publicado actual",
     heroTitleLineOne: "Prompts entran.",
     heroTitleLineTwo: "Proyectos salen.",
     heroText:
       "Un proyecto asistido por IA cada día. La función no siempre es IA; la práctica es promptar, iterar y publicar con evidencia.",
-    heroPrimary: "Abrir Dia 04",
+    heroPrimary: "Abrir Dia 05",
     heroRepo: "Ver repo en GitHub",
     panelLabel: "Build actual",
     signalPrompt: "Rastro de prompts",
-    signalPromptValue: "FocusTube Pomodoro",
+    signalPromptValue: "Clima + Rutina",
     signalBuild: "Modo de build",
     signalShip: "Estado",
-    signalToday: "Dia 04 activo",
+    signalToday: "Dia 05 activo",
     aboutEyebrow: "Por qué existe",
     aboutTitle: "Un archivo diario de práctica publicada.",
     aboutText:
@@ -133,10 +146,14 @@ const translations = {
     projectsRepo: "Abrir repositorio",
     projectOpen: "Abrir proyecto",
     projectScreenshotAlt: "Captura del proyecto",
-    previewEyebrow: "Vista del Dia 04",
-    previewTitle: "FocusTube Pomodoro ya esta en el archivo.",
-    previewLink: "Abrir FocusTube Pomodoro",
-    previewCaption: "Pomodoro bilingue estatico que reproduce YouTube durante descansos y guarda el progreso localmente.",
+    previewEyebrow: "Vista del Dia 05",
+    previewTitle: "Clima + Rutina ya esta en el archivo.",
+    previewLink: "Abrir Clima + Rutina",
+    previewCaption: "Dashboard bilingue de clima con tareas locales, datos de Open-Meteo y temas visuales segun el tiempo.",
+    previewMockLabel: "Vista previa del dashboard de clima",
+    previewMockLocation: "Madrid, Espana",
+    previewMockCondition: "Cielo despejado",
+    previewMockSuggestion: "Hoy es un buen dia para caminar y resolver un pendiente afuera.",
     philosophyEyebrow: "Filosofía de prompts",
     philosophyTitle: "Promptar es el oficio. Publicar es la prueba.",
     principleOneTitle: "Definir el marco",
@@ -192,6 +209,14 @@ const translations = {
         url: focusTubeLandingUrl,
         screenshot: "assets/focustube-pomodoro-screenshot.png",
         screenshotAlt: "Captura de FocusTube Pomodoro"
+      },
+      {
+        day: "Dia 05",
+        title: "Clima + Rutina",
+        description: "Dashboard bilingue de clima con Open-Meteo, temas dinamicos, sugerencias diarias y tareas locales.",
+        status: "Activo",
+        url: weatherRoutineUrl,
+        screenshotAlt: "Vista previa del dashboard Clima + Rutina"
       }
     ]
   },
@@ -206,19 +231,19 @@ const translations = {
     navPhilosophy: "Metodo",
     navRepo: "Repo",
     languageLabel: "Lingua",
-    heroEyebrow: "Giorno 01 / Diario con IA",
+    heroEyebrow: "Giorno 05 / Build pubblicata attuale",
     heroTitleLineOne: "Prompt dentro.",
     heroTitleLineTwo: "Progetti fuori.",
     heroText:
       "Un progetto assistito dall'IA ogni giorno. La funzione non è sempre IA; la pratica è prompt, iterazione e pubblicazione con tracce.",
-    heroPrimary: "Apri Giorno 04",
+    heroPrimary: "Apri Giorno 05",
     heroRepo: "Vedi repo GitHub",
     panelLabel: "Build attuale",
     signalPrompt: "Traccia prompt",
-    signalPromptValue: "FocusTube Pomodoro",
+    signalPromptValue: "Meteo + Routine",
     signalBuild: "Modalità build",
     signalShip: "Stato",
-    signalToday: "Giorno 04 online",
+    signalToday: "Giorno 05 online",
     aboutEyebrow: "Perché esiste",
     aboutTitle: "Un archivio quotidiano di pratica pubblicata.",
     aboutText:
@@ -228,10 +253,14 @@ const translations = {
     projectsRepo: "Apri repository",
     projectOpen: "Apri progetto",
     projectScreenshotAlt: "Screenshot del progetto",
-    previewEyebrow: "Anteprima Giorno 04",
-    previewTitle: "FocusTube Pomodoro e ora nell archivio.",
-    previewLink: "Apri FocusTube Pomodoro",
-    previewCaption: "Pomodoro statico bilingue che riproduce YouTube durante le pause e salva il progresso localmente.",
+    previewEyebrow: "Anteprima Giorno 05",
+    previewTitle: "Meteo + Routine e ora nell archivio.",
+    previewLink: "Apri Meteo + Routine",
+    previewCaption: "Dashboard meteo bilingue con task locali, dati Open-Meteo e temi visivi dinamici.",
+    previewMockLabel: "Anteprima dashboard meteo",
+    previewMockLocation: "Madrid, Spagna",
+    previewMockCondition: "Cielo sereno",
+    previewMockSuggestion: "Oggi e una buona giornata per camminare e fare una commissione all'aperto.",
     philosophyEyebrow: "Filosofia dei prompt",
     philosophyTitle: "Il prompt è il mestiere. La pubblicazione è la prova.",
     principleOneTitle: "Imposta il frame",
@@ -287,6 +316,14 @@ const translations = {
         url: focusTubeLandingUrl,
         screenshot: "assets/focustube-pomodoro-screenshot.png",
         screenshotAlt: "Screenshot di FocusTube Pomodoro"
+      },
+      {
+        day: "Giorno 05",
+        title: "Meteo + Routine",
+        description: "Dashboard meteo bilingue con Open-Meteo, temi dinamici, suggerimenti quotidiani e task locali.",
+        status: "Online",
+        url: weatherRoutineUrl,
+        screenshotAlt: "Anteprima dashboard Meteo + Routine"
       }
     ]
   },
@@ -301,19 +338,19 @@ const translations = {
     navPhilosophy: "Méthode",
     navRepo: "Repo",
     languageLabel: "Langue",
-    heroEyebrow: "Jour 01 / Journal avec IA",
+    heroEyebrow: "Jour 05 / Build actuelle livree",
     heroTitleLineOne: "Prompts entrés.",
     heroTitleLineTwo: "Projets livrés.",
     heroText:
       "Un projet assisté par IA chaque jour. La fonction n'est pas toujours IA; la pratique, c'est prompter, itérer et livrer avec des traces.",
-    heroPrimary: "Ouvrir Jour 04",
+    heroPrimary: "Ouvrir Jour 05",
     heroRepo: "Voir le repo GitHub",
     panelLabel: "Build actuel",
     signalPrompt: "Trace des prompts",
-    signalPromptValue: "FocusTube Pomodoro",
+    signalPromptValue: "Meteo + Routine",
     signalBuild: "Mode build",
     signalShip: "État",
-    signalToday: "Jour 04 en ligne",
+    signalToday: "Jour 05 en ligne",
     aboutEyebrow: "Pourquoi ça existe",
     aboutTitle: "Une archive quotidienne de pratique livrée.",
     aboutText:
@@ -323,10 +360,14 @@ const translations = {
     projectsRepo: "Ouvrir le dépôt",
     projectOpen: "Ouvrir le projet",
     projectScreenshotAlt: "Capture du projet",
-    previewEyebrow: "Apercu Jour 04",
-    previewTitle: "FocusTube Pomodoro est maintenant dans l archive.",
-    previewLink: "Ouvrir FocusTube Pomodoro",
-    previewCaption: "Pomodoro statique bilingue qui lit YouTube pendant les pauses et sauvegarde la progression localement.",
+    previewEyebrow: "Apercu Jour 05",
+    previewTitle: "Meteo + Routine est maintenant dans l archive.",
+    previewLink: "Ouvrir Meteo + Routine",
+    previewCaption: "Dashboard meteo bilingue avec taches locales, donnees Open-Meteo et themes visuels dynamiques.",
+    previewMockLabel: "Apercu du dashboard meteo",
+    previewMockLocation: "Madrid, Espagne",
+    previewMockCondition: "Ciel degage",
+    previewMockSuggestion: "Aujourd'hui est un bon jour pour marcher et faire une course dehors.",
     philosophyEyebrow: "Philosophie du prompt",
     philosophyTitle: "Le prompt est le métier. La livraison est la preuve.",
     principleOneTitle: "Poser le cadre",
@@ -382,6 +423,14 @@ const translations = {
         url: focusTubeLandingUrl,
         screenshot: "assets/focustube-pomodoro-screenshot.png",
         screenshotAlt: "Capture de FocusTube Pomodoro"
+      },
+      {
+        day: "Jour 05",
+        title: "Meteo + Routine",
+        description: "Dashboard meteo bilingue avec Open-Meteo, themes dynamiques, suggestions quotidiennes et taches locales.",
+        status: "En ligne",
+        url: weatherRoutineUrl,
+        screenshotAlt: "Apercu du dashboard Meteo + Routine"
       }
     ]
   },
@@ -396,19 +445,19 @@ const translations = {
     navPhilosophy: "Método",
     navRepo: "Repo",
     languageLabel: "Idioma",
-    heroEyebrow: "Dia 01 / Diário com IA",
+    heroEyebrow: "Dia 05 / Build publicado atual",
     heroTitleLineOne: "Prompts entram.",
     heroTitleLineTwo: "Projetos saem.",
     heroText:
       "Um projeto assistido por IA por dia. O recurso nem sempre é IA; a prática é criar prompts, iterar e publicar com registro.",
-    heroPrimary: "Abrir Dia 04",
+    heroPrimary: "Abrir Dia 05",
     heroRepo: "Ver repo no GitHub",
     panelLabel: "Build atual",
     signalPrompt: "Trilha de prompts",
-    signalPromptValue: "FocusTube Pomodoro",
+    signalPromptValue: "Clima + Rotina",
     signalBuild: "Modo build",
     signalShip: "Estado",
-    signalToday: "Dia 04 no ar",
+    signalToday: "Dia 05 no ar",
     aboutEyebrow: "Por que existe",
     aboutTitle: "Um arquivo diário de prática publicada.",
     aboutText:
@@ -418,10 +467,14 @@ const translations = {
     projectsRepo: "Abrir repositório",
     projectOpen: "Abrir projeto",
     projectScreenshotAlt: "Captura do projeto",
-    previewEyebrow: "Preview do Dia 04",
-    previewTitle: "FocusTube Pomodoro ja esta no arquivo.",
-    previewLink: "Abrir FocusTube Pomodoro",
-    previewCaption: "Pomodoro estatico bilingue que reproduz YouTube nas pausas e salva o progresso localmente.",
+    previewEyebrow: "Preview do Dia 05",
+    previewTitle: "Clima + Rotina ja esta no arquivo.",
+    previewLink: "Abrir Clima + Rotina",
+    previewCaption: "Dashboard bilingue de clima com tarefas locais, dados Open-Meteo e temas visuais dinamicos.",
+    previewMockLabel: "Preview do dashboard de clima",
+    previewMockLocation: "Madrid, Espanha",
+    previewMockCondition: "Ceu limpo",
+    previewMockSuggestion: "Hoje e um bom dia para caminhar e resolver uma tarefa fora de casa.",
     philosophyEyebrow: "Filosofia de prompt",
     philosophyTitle: "Promptar é o ofício. Publicar é a prova.",
     principleOneTitle: "Definir o quadro",
@@ -477,6 +530,14 @@ const translations = {
         url: focusTubeLandingUrl,
         screenshot: "assets/focustube-pomodoro-screenshot.png",
         screenshotAlt: "Captura do FocusTube Pomodoro"
+      },
+      {
+        day: "Dia 05",
+        title: "Clima + Rotina",
+        description: "Dashboard bilingue de clima com Open-Meteo, temas dinamicos, sugestoes diarias e tarefas locais.",
+        status: "No ar",
+        url: weatherRoutineUrl,
+        screenshotAlt: "Preview do dashboard Clima + Rotina"
       }
     ]
   }

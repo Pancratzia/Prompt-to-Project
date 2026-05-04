@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A bilingual weather and daily routine dashboard with local tasks and Open-Meteo weather."
+    />
+    <meta name="theme-color" content="#f7b267" />
+    <title>Weather + Routine Dashboard</title>
+    <link rel="preconnect" href="https://api.open-meteo.com" />
+    <link rel="preconnect" href="https://geocoding-api.open-meteo.com" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="theme-clear">
+    <div class="weather-shell" id="app">
+      <header class="topbar">
+        <a class="brand" href="#app" aria-label="Weather + Routine Dashboard">
+          <span class="brand-mark">W</span>
+          <span data-i18n="appName">Weather + Routine</span>
+        </a>
+
+        <div class="topbar-actions">
+          <a class="ghost-link" href="../day-01-landing-page/index.html" data-i18n="backLanding">Main landing</a>
+          <button class="ghost-button" id="refresh-weather" type="button" data-i18n="refresh">
+            Refresh
+          </button>
+          <button class="lang-toggle" id="language-toggle" type="button" aria-pressed="false">
+            ES
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-grid">
+        <section class="hero-panel" aria-labelledby="weather-title">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="todayDashboard">Daily dashboard</p>
+            <h1 id="weather-title" data-i18n="heroTitle">Plan your day around the sky.</h1>
+            <p class="hero-text" data-i18n="heroText">
+              Check the current weather, get a small routine suggestion, and keep today's tasks in one calm place.
+            </p>
+          </div>
+
+          <form class="search-card" id="location-form">
+            <label for="city-input" data-i18n="cityLabel">City or location</label>
+            <div class="search-row">
+              <input id="city-input" name="city" type="search" autocomplete="address-level2" placeholder="Madrid" />
+              <button type="submit" data-i18n="search">Search</button>
+            </div>
+            <button class="text-button" id="use-location" type="button" data-i18n="useMyLocation">
+              Use my location
+            </button>
+            <p class="status-line" id="weather-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="card weather-card" aria-labelledby="current-weather-heading">
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow" data-i18n="currentWeather">Current weather</p>
+              <h2 id="current-weather-heading" data-weather="location">Loading...</h2>
+            </div>
+            <div class="weather-icon" id="weather-icon" aria-hidden="true">
+              <span class="sun-core"></span>
+              <span class="cloud-puff"></span>
+              <span class="rain-lines"></span>
+              <span class="snow-flakes"></span>
+            </div>
+          </div>
+
+          <div class="temperature-row">
+            <strong><span data-weather="temperature">--</span><span>&deg;C</span></strong>
+            <span data-weather="condition">--</span>
+          </div>
+
+          <dl class="weather-details">
+            <div>
+              <dt data-i18n="windSpeed">Wind speed</dt>
+              <dd><span data-weather="wind">--</span> km/h</dd>
+            </div>
+            <div>
+              <dt data-i18n="dateTime">Date and time</dt>
+              <dd data-weather="date">--</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="card suggestion-card" aria-labelledby="suggestion-heading">
+          <p class="eyebrow" data-i18n="dailySuggestion">Daily suggestion</p>
+          <h2 id="suggestion-heading" data-i18n="suggestionTitle">Today is a good day to...</h2>
+          <p id="suggestion-message">Loading a suggestion for your weather.</p>
+        </section>
+
+        <section class="card task-card" aria-labelledby="tasks-heading">
+          <div class="card-heading compact">
+            <div>
+              <p class="eyebrow" data-i18n="dailyRoutine">Daily routine</p>
+              <h2 id="tasks-heading" data-i18n="tasksTitle">Today's tasks</h2>
+            </div>
+            <span class="task-count" id="task-count">0/0</span>
+          </div>
+
+          <form class="task-form" id="task-form">
+            <label class="sr-only" for="task-input" data-i18n="taskInputLabel">New task</label>
+            <input id="task-input" type="text" maxlength="80" placeholder="Add a task" />
+            <button type="submit" data-i18n="addTask">Add</button>
+          </form>
+
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+          <p class="empty-state" id="empty-state" data-i18n="emptyTasks">
+            No tasks yet. Add one small thing to start the day.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
